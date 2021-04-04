@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://componentes/cena_fundo_telas.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ativos/crash-a-like.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://telas/script_cena_controles.gd" type="Script" id=3]
+[ext_resource path="res://ativos/megaman_2.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 58
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="CenaFundo" parent="." instance=ExtResource( 1 )]
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 2
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 0.72549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Node2D"]
+modulate = Color( 0.992157, 1, 0, 1 )
+margin_left = 574.0
+margin_top = 35.0
+margin_right = 1387.0
+margin_bottom = 142.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "CONSTROLES"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+margin_left = 88.0
+margin_top = 393.0
+margin_right = 797.0
+margin_bottom = 464.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "ANDAR:        > e <"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
+margin_left = 90.6697
+margin_top = 487.774
+margin_right = 746.67
+margin_bottom = 558.774
+custom_fonts/normal_font = SubResource( 3 )
+text = "ATACAR:        A"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
+margin_left = 90.6697
+margin_top = 598.565
+margin_right = 746.67
+margin_bottom = 669.565
+custom_fonts/normal_font = SubResource( 3 )
+text = "PULAR:         ^ "
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Node2D"]
+margin_left = 89.3348
+margin_top = 692.004
+margin_right = 745.335
+margin_bottom = 763.004
+custom_fonts/normal_font = SubResource( 3 )
+text = "TELA DE OPÇÕES: ESC"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Button" parent="Node2D"]
+margin_left = 69.0
+margin_top = 937.0
+margin_right = 697.0
+margin_bottom = 1031.0
+custom_fonts/font = SubResource( 4 )
+text = "VOLTAR AO MENU PRINCIPAL"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Node2D/Voltar" to="." method="botao_voltar_tela_autenticado"]

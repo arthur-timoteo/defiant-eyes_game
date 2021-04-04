@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/telas_iniciais_fundo.wav-64e763364e7d15bceaf4776f3dcc773b.sample"
+
+[deps]
+
+source_file="res://ativos/sons/telas_iniciais_fundo.wav"
+dest_files=[ "res://.import/telas_iniciais_fundo.wav-64e763364e7d15bceaf4776f3dcc773b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
