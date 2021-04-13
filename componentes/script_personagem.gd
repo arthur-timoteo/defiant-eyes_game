@@ -1,17 +1,19 @@
 extends KinematicBody2D
 
 const ceu = Vector2(0, -1)
-const gravidade = 20
-const velocidade = 400
-const pulo_altura = -550
+const gravidade = 1200
+const velocidade = 500
+#const pulo_altura = -550
+const pulo_altura = -750
 var movimentacao = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Camera2D.limit_bottom = 1280
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	movimentacao.y += gravidade
+	movimentacao.y += gravidade * delta
 	
 	if Input.is_action_pressed("ui_right"):
 		movimentacao.x = velocidade

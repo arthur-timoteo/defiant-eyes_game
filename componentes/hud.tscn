@@ -5,3 +5,4 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TelaOpcoes" parent="." instance=ExtResource( 1 )]
+visible = false
