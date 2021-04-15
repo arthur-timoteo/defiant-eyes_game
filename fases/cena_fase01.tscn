@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles/chao01.tres" type="TileSet" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://ativos/imagens/fundo_fase/5.png" type="Texture" id=11]
 [ext_resource path="res://ativos/imagens/fundo_fase/6.png" type="Texture" id=12]
 [ext_resource path="res://itens/Vida.tscn" type="PackedScene" id=13]
+[ext_resource path="res://itens/Spinner.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -268,16 +269,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect12" type="ColorRect" parent="."]
-margin_left = 8739.83
-margin_top = 160.0
-margin_right = 8790.83
-margin_bottom = 211.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="ColorRect13" type="ColorRect" parent="."]
 margin_left = 10414.5
 margin_top = 934.499
@@ -382,3 +373,7 @@ __meta__ = {
 [node name="Vida" parent="." instance=ExtResource( 13 )]
 position = Vector2( 10752, 721.936 )
 scale = Vector2( 0.3, 0.3 )
+
+[node name="Spinner" parent="." instance=ExtResource( 14 )]
+position = Vector2( 8782.5, 192.025 )
+scale = Vector2( 0.6, 0.6 )
