@@ -13,6 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#pass
-	$Hud.position.x = $Personagem.get_node("KinematicBody2D").position.x
-	$Hud.position.y = $Personagem.get_node("KinematicBody2D").position.y
+	pass

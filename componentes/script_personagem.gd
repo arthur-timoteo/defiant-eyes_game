@@ -10,6 +10,7 @@ var movimentacao = Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Camera2D.limit_bottom = 1280
+	$Camera2D.limit_right = 16512
 	pass # Replace with function body.
 
 func _physics_process(delta):
