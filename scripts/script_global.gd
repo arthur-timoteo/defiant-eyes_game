@@ -7,5 +7,5 @@ var telaOrigemAteOpcoes = ""
 
 var faseAtual = 2
 
-var PersonagemX = 0
-var PersonagemY = 0
+var QuantidadeSpinner = 0
+var QuantidadeVida = 0

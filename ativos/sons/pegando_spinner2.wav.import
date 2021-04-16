@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pegando_spinner2.wav-99a906a04a70cb0b44d3a4a18847a172.sample"
+
+[deps]
+
+source_file="res://ativos/sons/pegando_spinner2.wav"
+dest_files=[ "res://.import/pegando_spinner2.wav-99a906a04a70cb0b44d3a4a18847a172.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pegando_olho.wav-e0b29d526c6628d7f09047f15e3e72c6.sample"
+
+[deps]
+
+source_file="res://ativos/sons/pegando_olho.wav"
+dest_files=[ "res://.import/pegando_olho.wav-e0b29d526c6628d7f09047f15e3e72c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
