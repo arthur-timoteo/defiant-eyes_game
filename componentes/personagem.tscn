@@ -5,7 +5,7 @@
 [ext_resource path="res://ativos/sons/personagem_pulo.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.9083, 29.0882 )
+extents = Vector2( 13.9083, 28.6529 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "andando"
@@ -22,6 +22,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 142, 127, 35, 61 ), Rect2( 257, 127, 47, 60 ), Rect2( 378, 127, 46, 56 ), Rect2( 504, 127, 35, 61 ), Rect2( 614, 127, 54, 62 ), Rect2( 741, 127, 49, 60 ), Rect2( 866, 127, 38, 61 ), Rect2( 988, 127, 35, 61 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.110394, 2.46641 ), Vector2( 0.166076, 2.94898 ), Vector2( 0.0838794, 4.94024 ), Vector2( 0.0140568, 2.44917 ), Vector2( 0.0333242, 1.97005 ), Vector2( 0.275316, 2.98504 ), Vector2( 0.201782, 2.47808 ), Vector2( 0.156088, 2.47224 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -72,10 +84,23 @@ tracks/0/keys = {
 "update": 1,
 "values": [ Rect2( 22, 9, 32, 66 ), Rect2( 97, 9, 32, 66 ), Rect2( 172, 9, 32, 66 ), Rect2( 247, 9, 32, 66 ), Rect2( 322, 9, 32, 66 ), Rect2( 397, 8, 32, 67 ), Rect2( 472, 8, 32, 67 ), Rect2( 547, 7, 32, 68 ), Rect2( 622, 7, 32, 68 ), Rect2( 697, 8, 32, 67 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -0.0248032, -0.496061 ), Vector2( -0.0198425, -0.479526 ), Vector2( -0.00661418, -0.979721 ), Vector2( -0.0292126, -0.983853 ), Vector2( -0.0146063, -0.491926 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "pulando"
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
 tracks/0/interp = 1
@@ -105,7 +130,7 @@ region_enabled = true
 region_rect = Rect2( 22, 9, 32, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -0.297012, 4.02455 )
+position = Vector2( -0.441833, 4.41222 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
