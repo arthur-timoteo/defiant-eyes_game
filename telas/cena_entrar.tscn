@@ -31,10 +31,11 @@ script = ExtResource( 3 )
 
 [node name="Usuario" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 115.205
-margin_top = 637.949
-margin_right = 534.205
-margin_bottom = 733.949
+margin_left = 53.5032
+margin_top = 322.764
+margin_right = 472.503
+margin_bottom = 418.764
+rect_scale = Vector2( 0.68, 0.599999 )
 custom_fonts/normal_font = SubResource( 1 )
 text = " USUÁRIO:"
 __meta__ = {
@@ -44,10 +45,11 @@ __meta__ = {
 
 [node name="Senha" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 115.205
-margin_top = 761.42
-margin_right = 534.205
-margin_bottom = 857.42
+margin_left = 50.5066
+margin_top = 393.794
+margin_right = 469.507
+margin_bottom = 489.794
+rect_scale = Vector2( 0.720001, 0.6 )
 custom_fonts/normal_font = SubResource( 2 )
 text = " SENHA:"
 __meta__ = {
@@ -56,6 +58,7 @@ __meta__ = {
 }
 
 [node name="Node2D" type="Node2D" parent="."]
+scale = Vector2( 0.6, 0.52 )
 z_index = 1
 
 [node name="ColorRect" type="ColorRect" parent="Node2D"]

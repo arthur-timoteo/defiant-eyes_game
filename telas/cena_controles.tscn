@@ -30,8 +30,8 @@ script = ExtResource( 3 )
 z_index = 2
 
 [node name="ColorRect" type="ColorRect" parent="Node2D"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_right = 1034.0
+margin_bottom = 608.0
 color = Color( 0, 0, 0, 0.72549 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,10 +39,10 @@ __meta__ = {
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="Node2D"]
 modulate = Color( 0.992157, 1, 0, 1 )
-margin_left = 574.0
-margin_top = 35.0
-margin_right = 1387.0
-margin_bottom = 142.0
+margin_left = 145.885
+margin_top = 18.3511
+margin_right = 958.885
+margin_bottom = 125.351
 custom_fonts/normal_font = SubResource( 1 )
 text = "CONSTROLES"
 __meta__ = {
@@ -51,10 +51,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
-margin_left = 88.0
-margin_top = 393.0
-margin_right = 797.0
-margin_bottom = 464.0
+margin_left = 21.4044
+margin_top = 117.104
+margin_right = 730.404
+margin_bottom = 188.104
 custom_fonts/normal_font = SubResource( 2 )
 text = "ANDAR:        > e <"
 __meta__ = {
@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
-margin_left = 90.6697
-margin_top = 487.774
-margin_right = 746.67
-margin_bottom = 558.774
+margin_left = 24.0741
+margin_top = 211.878
+margin_right = 680.074
+margin_bottom = 282.878
 custom_fonts/normal_font = SubResource( 3 )
 text = "ATACAR:        A"
 __meta__ = {
@@ -75,10 +75,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
-margin_left = 90.6697
-margin_top = 598.565
-margin_right = 746.67
-margin_bottom = 669.565
+margin_left = 24.0741
+margin_top = 322.669
+margin_right = 680.074
+margin_bottom = 393.669
 custom_fonts/normal_font = SubResource( 3 )
 text = "PULAR:         ^ "
 __meta__ = {
@@ -87,10 +87,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Node2D"]
-margin_left = 89.3348
-margin_top = 692.004
-margin_right = 745.335
-margin_bottom = 763.004
+margin_left = 22.7392
+margin_top = 416.108
+margin_right = 678.739
+margin_bottom = 487.108
 custom_fonts/normal_font = SubResource( 3 )
 text = "TELA DE OPÇÕES: ESC"
 __meta__ = {
@@ -99,10 +99,10 @@ __meta__ = {
 }
 
 [node name="Voltar" type="Button" parent="Node2D"]
-margin_left = 69.0
-margin_top = 937.0
-margin_right = 697.0
-margin_bottom = 1031.0
+margin_left = 28.567
+margin_top = 494.615
+margin_right = 656.567
+margin_bottom = 588.615
 custom_fonts/font = SubResource( 4 )
 text = "VOLTAR AO MENU PRINCIPAL"
 __meta__ = {

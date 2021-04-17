@@ -24,10 +24,10 @@ script = ExtResource( 3 )
 
 [node name="Entrar" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 115.205
-margin_top = 637.949
-margin_right = 534.205
-margin_bottom = 733.949
+margin_left = 27.205
+margin_top = 240.0
+margin_right = 446.205
+margin_bottom = 336.0
 custom_fonts/normal_font = SubResource( 1 )
 text = " ENTRAR"
 __meta__ = {
@@ -37,10 +37,10 @@ __meta__ = {
 
 [node name="Opcoes" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 117.878
-margin_top = 773.366
-margin_right = 536.878
-margin_bottom = 869.366
+margin_left = 29.878
+margin_top = 375.417
+margin_right = 448.878
+margin_bottom = 471.417
 custom_fonts/normal_font = SubResource( 2 )
 text = " OPÇÕES"
 __meta__ = {
@@ -50,10 +50,10 @@ __meta__ = {
 
 [node name="Sair" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 117.878
-margin_top = 890.102
-margin_right = 536.878
-margin_bottom = 986.102
+margin_left = 29.878
+margin_top = 492.153
+margin_right = 448.878
+margin_bottom = 588.153
 custom_fonts/normal_font = SubResource( 1 )
 text = " SAIR"
 __meta__ = {

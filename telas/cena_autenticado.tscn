@@ -28,10 +28,10 @@ script = ExtResource( 3 )
 
 [node name="Iniciar" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 115.205
-margin_top = 637.949
-margin_right = 534.205
-margin_bottom = 733.949
+margin_left = 20.0684
+margin_top = 233.618
+margin_right = 439.068
+margin_bottom = 329.618
 custom_fonts/normal_font = SubResource( 1 )
 text = " INICIAR"
 __meta__ = {
@@ -41,10 +41,10 @@ __meta__ = {
 
 [node name="Opcoes" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 111.43
-margin_top = 754.989
-margin_right = 530.43
-margin_bottom = 850.989
+margin_left = 16.2934
+margin_top = 350.658
+margin_right = 435.293
+margin_bottom = 446.658
 custom_fonts/normal_font = SubResource( 2 )
 text = " OPÇÕES"
 __meta__ = {
@@ -54,10 +54,10 @@ __meta__ = {
 
 [node name="Controles" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 117.093
-margin_top = 887.131
-margin_right = 536.093
-margin_bottom = 983.131
+margin_left = 21.9564
+margin_top = 482.8
+margin_right = 440.956
+margin_bottom = 578.8
 custom_fonts/normal_font = SubResource( 2 )
 text = " CONTROLES"
 __meta__ = {
@@ -66,10 +66,10 @@ __meta__ = {
 }
 
 [node name="Sair" type="Button" parent="."]
-margin_left = 1646.0
-margin_top = 967.0
-margin_right = 1892.0
-margin_bottom = 1050.0
+margin_left = 749.337
+margin_top = 22.7692
+margin_right = 995.337
+margin_bottom = 105.769
 custom_fonts/font = SubResource( 3 )
 text = "SAIR"
 __meta__ = {
