@@ -5,13 +5,13 @@
 [ext_resource path="res://componentes/script_hud.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 42
+size = 20
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 100
+size = 50
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -28,10 +28,10 @@ __meta__ = {
 }
 
 [node name="Pontos" type="Label" parent="Control1"]
-margin_left = 22.4449
+margin_left = 22.0
 margin_top = 2.0
-margin_right = 186.445
-margin_bottom = 156.0
+margin_right = 186.0
+margin_bottom = 60.0
 custom_fonts/font = SubResource( 1 )
 text = "00"
 valign = 1
@@ -40,19 +40,20 @@ __meta__ = {
 }
 
 [node name="Control2" type="Control" parent="."]
-margin_left = 312.0
-margin_right = 352.0
-margin_bottom = 40.0
+margin_left = 183.855
+margin_top = 6.00677
+margin_right = 223.855
+margin_bottom = 46.0068
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Spinners" type="Label" parent="Control2"]
-margin_left = 22.4449
+margin_left = 22.0
 margin_top = 2.0
-margin_right = 186.445
-margin_bottom = 156.0
+margin_right = 186.0
+margin_bottom = 54.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.87451, 0.443137, 0.14902, 1 )
 text = "SPINNERS"
@@ -62,10 +63,10 @@ __meta__ = {
 }
 
 [node name="QuantSpinners" type="Label" parent="Control2"]
-margin_left = 387.96
-margin_top = 2.0
-margin_right = 551.96
-margin_bottom = 156.0
+margin_left = 215.616
+margin_top = 2.84091
+margin_right = 379.616
+margin_bottom = 54.8409
 custom_fonts/font = SubResource( 1 )
 text = "00"
 valign = 1
@@ -74,20 +75,20 @@ __meta__ = {
 }
 
 [node name="Control3" type="Control" parent="."]
-margin_left = 943.786
-margin_top = 1.5874
-margin_right = 983.786
-margin_bottom = 41.5874
+margin_left = 474.681
+margin_top = 0.643522
+margin_right = 514.681
+margin_bottom = 40.6435
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Tempo" type="Label" parent="Control3"]
-margin_left = 22.4449
+margin_left = 22.0
 margin_top = 2.0
-margin_right = 186.445
-margin_bottom = 156.0
+margin_right = 123.0
+margin_bottom = 67.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.992157, 1, 0, 1 )
 text = "60"
@@ -97,10 +98,10 @@ __meta__ = {
 }
 
 [node name="Control4" type="Control" parent="."]
-margin_left = 1578.0
-margin_top = 8.0
-margin_right = 1618.0
-margin_bottom = 48.0
+margin_left = 859.968
+margin_top = 6.02966
+margin_right = 899.968
+margin_bottom = 46.0297
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -111,6 +112,7 @@ margin_left = 3.16064
 margin_top = -0.847946
 margin_right = 153.161
 margin_bottom = 149.152
+rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -118,9 +120,10 @@ __meta__ = {
 }
 
 [node name="NumVidas" type="Label" parent="Control4"]
-margin_left = 148.0
-margin_right = 312.0
-margin_bottom = 154.0
+margin_left = 67.0
+margin_top = 4.0
+margin_right = 153.0
+margin_bottom = 70.0
 custom_fonts/font = SubResource( 1 )
 text = "00"
 align = 2

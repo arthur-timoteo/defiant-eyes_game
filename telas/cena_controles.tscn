@@ -6,19 +6,19 @@
 [ext_resource path="res://ativos/megaman_2.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 80
+size = 52
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 80
+size = 50
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 80
+size = 50
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 58
+size = 40
 font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
@@ -37,12 +37,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="Node2D"]
+[node name="Titulo" type="RichTextLabel" parent="Node2D"]
 modulate = Color( 0.992157, 1, 0, 1 )
-margin_left = 145.885
-margin_top = 18.3511
-margin_right = 958.885
-margin_bottom = 125.351
+margin_left = 256.873
+margin_top = 14.2202
+margin_right = 787.873
+margin_bottom = 81.2202
 custom_fonts/normal_font = SubResource( 1 )
 text = "CONSTROLES"
 __meta__ = {
@@ -51,10 +51,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
-margin_left = 21.4044
-margin_top = 117.104
-margin_right = 730.404
-margin_bottom = 188.104
+margin_left = 36.5234
+margin_top = 176.32
+margin_right = 745.523
+margin_bottom = 247.32
 custom_fonts/normal_font = SubResource( 2 )
 text = "ANDAR:        > e <"
 __meta__ = {
@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
-margin_left = 24.0741
-margin_top = 211.878
-margin_right = 680.074
-margin_bottom = 282.878
+margin_left = 36.6733
+margin_top = 239.596
+margin_right = 692.673
+margin_bottom = 310.596
 custom_fonts/normal_font = SubResource( 3 )
 text = "ATACAR:        A"
 __meta__ = {
@@ -75,10 +75,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
-margin_left = 24.0741
-margin_top = 322.669
-margin_right = 680.074
-margin_bottom = 393.669
+margin_left = 35.4134
+margin_top = 305.03
+margin_right = 691.413
+margin_bottom = 376.03
 custom_fonts/normal_font = SubResource( 3 )
 text = "PULAR:         ^ "
 __meta__ = {
@@ -87,10 +87,10 @@ __meta__ = {
 }
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Node2D"]
-margin_left = 22.7392
-margin_top = 416.108
-margin_right = 678.739
-margin_bottom = 487.108
+margin_left = 32.8186
+margin_top = 375.791
+margin_right = 688.818
+margin_bottom = 446.791
 custom_fonts/normal_font = SubResource( 3 )
 text = "TELA DE OPÇÕES: ESC"
 __meta__ = {
@@ -99,10 +99,10 @@ __meta__ = {
 }
 
 [node name="Voltar" type="Button" parent="Node2D"]
-margin_left = 28.567
-margin_top = 494.615
-margin_right = 656.567
-margin_bottom = 588.615
+margin_left = 35.379
+margin_top = 523.52
+margin_right = 446.379
+margin_bottom = 578.52
 custom_fonts/font = SubResource( 4 )
 text = "VOLTAR AO MENU PRINCIPAL"
 __meta__ = {

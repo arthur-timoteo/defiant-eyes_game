@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 const ceu = Vector2(0, -1)
 const gravidade = 1200
-const velocidade = 500
+const velocidade = 400
 #const pulo_altura = -550
-const pulo_altura = -750
+const pulo_altura = -620
 var movimentacao = Vector2()
 
 # Called when the node enters the scene tree for the first time.

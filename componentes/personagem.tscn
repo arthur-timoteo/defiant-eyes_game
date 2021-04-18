@@ -5,7 +5,7 @@
 [ext_resource path="res://ativos/sons/personagem_pulo.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13.9083, 28.6529 )
+extents = Vector2( 9.99283, 28.6529 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "andando"
@@ -130,7 +130,7 @@ region_enabled = true
 region_rect = Rect2( 22, 9, 32, 66 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -0.441833, 4.41222 )
+position = Vector2( 1.00635, 4.40294 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
@@ -153,7 +153,7 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 drag_margin_left = 0.7
-drag_margin_top = 0.3
-drag_margin_bottom = 0.3
+drag_margin_right = 0.0
+drag_margin_bottom = 0.4
 editor_draw_limits = true
 editor_draw_drag_margin = true

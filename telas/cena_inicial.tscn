@@ -6,14 +6,14 @@
 [ext_resource path="res://ativos/sons/selecionando_opcao_menu.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 100
-outline_size = 5
+size = 62
+outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 100
-outline_size = 5
+size = 62
+outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
@@ -24,10 +24,10 @@ script = ExtResource( 3 )
 
 [node name="Entrar" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 27.205
-margin_top = 240.0
-margin_right = 446.205
-margin_bottom = 336.0
+margin_left = 30.0
+margin_top = 375.0
+margin_right = 231.0
+margin_bottom = 429.0
 custom_fonts/normal_font = SubResource( 1 )
 text = " ENTRAR"
 __meta__ = {
@@ -37,10 +37,10 @@ __meta__ = {
 
 [node name="Opcoes" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 29.878
-margin_top = 375.417
-margin_right = 448.878
-margin_bottom = 471.417
+margin_left = 30.0
+margin_top = 449.0
+margin_right = 216.0
+margin_bottom = 506.0
 custom_fonts/normal_font = SubResource( 2 )
 text = " OPÇÕES"
 __meta__ = {
@@ -50,10 +50,10 @@ __meta__ = {
 
 [node name="Sair" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 29.878
-margin_top = 492.153
-margin_right = 448.878
-margin_bottom = 588.153
+margin_left = 30.0
+margin_top = 520.0
+margin_right = 179.0
+margin_bottom = 576.0
 custom_fonts/normal_font = SubResource( 1 )
 text = " SAIR"
 __meta__ = {
