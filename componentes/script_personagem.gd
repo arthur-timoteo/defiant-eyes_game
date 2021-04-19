@@ -21,9 +21,13 @@ func _physics_process(delta):
 	movimentacao.x = 0
 	var direcao_movimento = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	movimentacao.x = velocidade * direcao_movimento
+	#$".".scale.x *= direcao_movimento if direcao_movimento != 0 else 1
 	
 	if direcao_movimento != 0:
-		$Sprite.flip_h = false if direcao_movimento > 0 else true
+		if direcao_movimento < 0 && $".".get_transform().get_scale().y > 0:
+			$".".scale.x *= -1
+		elif direcao_movimento > 0 && $".".get_transform().get_scale().y < 0:
+			$".".scale.x *= -1
 	
 	movimentacao = move_and_slide(movimentacao, ceu)
 		
@@ -34,7 +38,7 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("ui_atq_marreta") && !atacando1 &&!atacando2:
 		atacando1 = true
-		yield(get_tree().create_timer(0.2), "timeout")
+		yield(get_tree().create_timer(0.3), "timeout")
 		atacando1 = false
 		
 	if Input.is_action_just_pressed("ui_atq_spinner") && !atacando2 &&!atacando1:

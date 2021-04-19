@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ativos/imagens/zoio_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://componentes/script_personagem.gd" type="Script" id=2]
@@ -52,6 +52,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [ Rect2( 136, 361, 38, 66 ), Rect2( 242, 361, 53, 66 ), Rect2( 363, 355, 92, 72 ), Rect2( 511, 365, 35, 62 ), Rect2( 632, 365, 28, 62 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -3.97874, 0.0940902 ), Vector2( -11.5059, 0.0511367 ), Vector2( 8.11586, -3.17795 ), Vector2( 6.48846, 1.86798 ), Vector2( 3.08242, 1.91423 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CaixaAtaquePivo/AtaqueMarreta/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "ataque_spinner"
@@ -68,6 +92,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 135, 509, 38, 66 ), Rect2( 269, 513, 37, 62 ), Rect2( 390, 513, 46, 62 ), Rect2( 510, 513, 52, 62 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -3.97874, -0.0383408 ), Vector2( 6.12342, 1.92597 ), Vector2( 10.4262, 1.8792 ), Vector2( 10.4262, 1.8792 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -113,9 +149,13 @@ tracks/0/keys = {
 "values": [ Rect2( 147, 239, 28, 68 ), Rect2( 271, 238, 27, 69 ), Rect2( 392, 237, 25, 70 ), Rect2( 513, 237, 25, 70 ), Rect2( 634, 238, 31, 69 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 13.4264
+height = 36.2745
+
 [node name="Node2D" type="Node2D"]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Personagem" type="KinematicBody2D" parent="."]
 scale = Vector2( 3, 3 )
 collision_mask = 30
 script = ExtResource( 2 )
@@ -123,17 +163,23 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 0.110394, 2.46641 )
+[node name="Sprite" type="Sprite" parent="Personagem"]
+position = Vector2( 10.4262, 1.8792 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 135, 509, 38, 66 )
+region_rect = Rect2( 510, 513, 52, 62 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
 position = Vector2( 1.00635, 4.40294 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Personagem"]
 autoplay = "parado"
 anims/andando = SubResource( 2 )
 anims/ataque_marreta = SubResource( 3 )
@@ -141,11 +187,11 @@ anims/ataque_spinner = SubResource( 4 )
 anims/parado = SubResource( 5 )
 anims/pulando = SubResource( 6 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="KinematicBody2D"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Personagem"]
 stream = ExtResource( 3 )
 volume_db = -20.0
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
 current = true
 limit_left = 0
 limit_top = 0
@@ -157,3 +203,19 @@ drag_margin_right = 0.0
 drag_margin_bottom = 0.4
 editor_draw_limits = true
 editor_draw_drag_margin = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CaixaAtaquePivo" type="Position2D" parent="Personagem"]
+
+[node name="AtaqueMarreta" type="Area2D" parent="Personagem/CaixaAtaquePivo"]
+collision_layer = 16
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/CaixaAtaquePivo/AtaqueMarreta"]
+position = Vector2( 34.4611, -7.24181 )
+rotation = -0.436332
+scale = Vector2( 1, 1 )
+shape = SubResource( 7 )
+disabled = true
