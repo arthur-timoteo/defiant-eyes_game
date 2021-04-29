@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ativos/imagens/inimigo1_spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://Inimigos/script_inimigo01.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.36891, 33.0766 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "andando"
+length = 0.75
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 11, 390, 35, 69 ), Rect2( 106, 387, 31, 72 ), Rect2( 197, 385, 36, 74 ), Rect2( 286, 389, 46, 70 ), Rect2( 386, 387, 37, 72 ), Rect2( 485, 385, 29, 74 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "parado"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 8, 294, 38, 70 ), Rect2( 104, 294, 37, 70 ), Rect2( 199, 294, 36, 70 ), Rect2( 293, 294, 37, 70 ) ]
+}
+
+[node name="Inimigo01" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 8, 294, 38, 70 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.944939, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "andando"
+anims/andando = SubResource( 2 )
+anims/parado = SubResource( 3 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_personagem_terminou"]

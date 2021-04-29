@@ -58,6 +58,7 @@ ui_atq_spinner={
 2d_physics/layer_3="Itens"
 2d_physics/layer_4="Mundo"
 2d_physics/layer_5="CaixaAtaque"
+2d_physics/layer_6="CaixaDano"
 
 [rendering]
 

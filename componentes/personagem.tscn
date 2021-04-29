@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ativos/imagens/zoio_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://componentes/script_personagem.gd" type="Script" id=2]
@@ -106,6 +106,22 @@ tracks/1/keys = {
 "values": [ Vector2( -3.97874, -0.0383408 ), Vector2( 6.12342, 1.92597 ), Vector2( 10.4262, 1.8792 ), Vector2( 10.4262, 1.8792 ) ]
 }
 
+[sub_resource type="Animation" id=9]
+resource_name = "dano"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 22, 663, 32, 66 ), Rect2( 97, 663, 32, 66 ), Rect2( 172, 663, 32, 66 ), Rect2( 247, 663, 32, 66 ), Rect2( 322, 663, 32, 66 ) ]
+}
+
 [sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
@@ -153,6 +169,9 @@ tracks/0/keys = {
 radius = 13.4264
 height = 36.2745
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 10.329, 24.5776 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Personagem" type="KinematicBody2D" parent="."]
@@ -164,10 +183,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Personagem"]
-position = Vector2( 10.4262, 1.8792 )
+position = Vector2( 0.110394, 2.46641 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 510, 513, 52, 62 )
+region_rect = Rect2( 22, 663, 32, 66 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -184,6 +203,7 @@ autoplay = "parado"
 anims/andando = SubResource( 2 )
 anims/ataque_marreta = SubResource( 3 )
 anims/ataque_spinner = SubResource( 4 )
+anims/dano = SubResource( 9 )
 anims/parado = SubResource( 5 )
 anims/pulando = SubResource( 6 )
 
@@ -216,6 +236,15 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/CaixaAtaquePivo/AtaqueMarreta"]
 position = Vector2( 34.4611, -7.24181 )
 rotation = -0.436332
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 disabled = true
+
+[node name="CaixaDano" type="Area2D" parent="Personagem"]
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/CaixaDano"]
+modulate = Color( 1, 0, 0.984314, 1 )
+position = Vector2( 0.916667, 0.25 )
+shape = SubResource( 8 )
+[connection signal="body_entered" from="Personagem/CaixaDano" to="Personagem" method="_colidiu_com_inimigo"]
