@@ -28,8 +28,10 @@ func _physics_process(delta):
 		if direcao_movimento != 0:
 			if direcao_movimento < 0 && $".".get_transform().get_scale().y > 0:
 				$".".scale.x *= -1
+				ScriptGlobal.spinner_mov = Vector2(-10, 0.5)
 			elif direcao_movimento > 0 && $".".get_transform().get_scale().y < 0:
 				$".".scale.x *= -1
+				ScriptGlobal.spinner_mov = Vector2(10, 0.5)
 		
 		movimentacao = move_and_slide(movimentacao, ceu)
 			
@@ -47,6 +49,7 @@ func _physics_process(delta):
 			atacando2 = true
 			yield(get_tree().create_timer(0.2), "timeout")
 			atacando2 = false
+			spinner_ataque()
 	
 	if recebeu_dano:
 		animacao = "dano"
@@ -67,3 +70,11 @@ func _colidiu_com_inimigo(body):
 	recebeu_dano = true
 	yield(get_tree().create_timer(0.4), "timeout")
 	recebeu_dano = false
+
+func spinner_ataque():
+	if(ScriptGlobal.QuantidadeSpinner > 0):
+		ScriptGlobal.QuantidadeSpinner -= 1
+		var cena_spinner_ataque = preload("res://componentes/spinner_giro.tscn")
+		var objeto_spinner = cena_spinner_ataque.instance()
+		objeto_spinner.global_position = $CaixaAtaquePivo.global_position
+		get_tree().root.add_child((objeto_spinner))
