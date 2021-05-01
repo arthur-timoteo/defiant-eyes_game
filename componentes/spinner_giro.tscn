@@ -29,6 +29,8 @@ script = ExtResource( 2 )
 
 [node name="area2d" type="Area2D" parent="."]
 position = Vector2( 0.264603, 0.580681 )
+collision_layer = 128
+collision_mask = 46
 __meta__ = {
 "_edit_lock_": true
 }
