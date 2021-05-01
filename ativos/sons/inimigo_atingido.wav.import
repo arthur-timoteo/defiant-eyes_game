@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/inimigo_atingido.wav-39441f1cf3e4910722bde4730d423ca6.sample"
+
+[deps]
+
+source_file="res://ativos/sons/inimigo_atingido.wav"
+dest_files=[ "res://.import/inimigo_atingido.wav-39441f1cf3e4910722bde4730d423ca6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -68,6 +68,8 @@ func _physics_process(delta):
 
 func _colidiu_com_inimigo(body):
 	recebeu_dano = true
+	$AudioStreamPlayer2.play()
+	ScriptGlobal.QuantidadeVida -= 1
 	yield(get_tree().create_timer(0.4), "timeout")
 	recebeu_dano = false
 

@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ativos/imagens/inimigo1_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Inimigos/script_inimigo01.gd" type="Script" id=2]
+[ext_resource path="res://ativos/sons/inimigo_atingido.wav" type="AudioStream" id=3]
+[ext_resource path="res://ativos/sons/inimigo_morte.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.36891, 33.0766 )
@@ -25,7 +27,62 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "parado"
+resource_name = "atingido"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 0, 201, 46, 70 ), Rect2( 0, 201, 46, 70 ), Rect2( 100, 201, 41, 69 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -1.18921, -0.148651 ), Vector2( -1.18921, -0.148651 ), Vector2( -0.743256, -0.148651 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "morrendo"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 8, 105, 38, 70 ), Rect2( 110, 122, 44, 53 ), Rect2( 205, 136, 64, 39 ), Rect2( 299, 154, 70, 21 ), Rect2( 299, 154, 70, 21 ), Rect2( 299, 154, 70, 21 ), Rect2( 299, 154, 70, 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0.594604, 7.72985 ), Vector2( 11.2975, 14.2705 ), Vector2( 12.1894, 23.7841 ), Vector2( 12.1894, 23.7841 ), Vector2( 12.1894, 23.7841 ), Vector2( 12.1894, 23.7841 ) ]
+}
+
+[sub_resource type="Animation" id=5]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -42,13 +99,14 @@ tracks/0/keys = {
 
 [node name="Inimigo01" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.18921, -0.148651 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 8, 294, 38, 70 )
+region_rect = Rect2( 0, 201, 46, 70 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.944939, 0 )
@@ -57,5 +115,32 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "andando"
 anims/andando = SubResource( 2 )
-anims/parado = SubResource( 3 )
+anims/atingido = SubResource( 3 )
+anims/morrendo = SubResource( 4 )
+anims/parado = SubResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="CaixaAtaque" type="Area2D" parent="."]
+visible = false
+collision_layer = 16
+collision_mask = 192
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CaixaAtaque"]
+modulate = Color( 0.219608, 1, 0, 1 )
+position = Vector2( 0.944939, 0 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.944939, 0 )
+shape = SubResource( 1 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_personagem_terminou"]
+[connection signal="area_entered" from="CaixaAtaque" to="." method="colidiu_com_inimigo"]
