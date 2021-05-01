@@ -400,7 +400,69 @@ position = Vector2( 247.664, 779.677 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="Inimigo01" parent="." instance=ExtResource( 17 )]
-position = Vector2( 960, 765.989 )
+position = Vector2( 2368, 767.111 )
+esquerda_maxima = 1536
+direita_maxima = 2560
+
+[node name="Inimigo02" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3872, 767.111 )
+esquerda_maxima = 3072
+direita_maxima = 4096
+
+[node name="Inimigo03" parent="." instance=ExtResource( 17 )]
+position = Vector2( 4416.95, 767.652 )
+esquerda_maxima = 3840
+direita_maxima = 4608
+
+[node name="Inimigo04" parent="." instance=ExtResource( 17 )]
+position = Vector2( 5606.48, 767.652 )
+esquerda_maxima = 5120
+direita_maxima = 6050
+
+[node name="Inimigo05" parent="." instance=ExtResource( 17 )]
+position = Vector2( 6144.95, 767.652 )
+esquerda_maxima = 6100
+direita_maxima = 6656
+
+[node name="Inimigo06" parent="." instance=ExtResource( 17 )]
+position = Vector2( 7732.05, 767.652 )
+esquerda_maxima = 7296
+direita_maxima = 8064
+
+[node name="Inimigo07" parent="." instance=ExtResource( 17 )]
+position = Vector2( 8352, 767.111 )
+esquerda_maxima = 8192
+direita_maxima = 8960
+
+[node name="Inimigo08" parent="." instance=ExtResource( 17 )]
+position = Vector2( 8960, 767.652 )
+esquerda_maxima = 8832
+direita_maxima = 9600
+
+[node name="Inimigo09" parent="." instance=ExtResource( 17 )]
+position = Vector2( 10400.9, 765.989 )
+esquerda_maxima = 9728
+direita_maxima = 10688
+
+[node name="Inimigo10" parent="." instance=ExtResource( 17 )]
+position = Vector2( 11100.1, 767.111 )
+esquerda_maxima = 10880
+direita_maxima = 11264
+
+[node name="Inimigo11" parent="." instance=ExtResource( 17 )]
+position = Vector2( 11350, 768 )
+esquerda_maxima = 11264
+direita_maxima = 11800
+
+[node name="Inimigo12" parent="." instance=ExtResource( 17 )]
+position = Vector2( 12974.2, 767.111 )
+esquerda_maxima = 12288
+direita_maxima = 13312
+
+[node name="Inimigo13" parent="." instance=ExtResource( 17 )]
+position = Vector2( 14560, 767.111 )
+esquerda_maxima = 14208
+direita_maxima = 15104
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 8243.39, 1033.19 )
