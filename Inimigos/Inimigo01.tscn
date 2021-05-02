@@ -1,13 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://ativos/imagens/inimigo1_spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Inimigos/script_inimigo01.gd" type="Script" id=2]
 [ext_resource path="res://ativos/sons/inimigo_atingido.wav" type="AudioStream" id=3]
 [ext_resource path="res://ativos/sons/inimigo_morte.wav" type="AudioStream" id=4]
 
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.36891, 33.0766 )
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 7.36891, 32.5336 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "andando"
@@ -25,6 +24,66 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Rect2( 11, 390, 35, 69 ), Rect2( 106, 387, 31, 72 ), Rect2( 197, 385, 36, 74 ), Rect2( 286, 389, 46, 70 ), Rect2( 386, 387, 37, 72 ), Rect2( 485, 385, 29, 74 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.18921, -0.148651 ), Vector2( -1.2482, -1.15152 ), Vector2( -2.76725, -2.13964 ), Vector2( -2.35922, -0.119155 ), Vector2( -2.18716, -1.19576 ), Vector2( -1.60215, -2.09539 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15, 0.45, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.16104, -0.136978 ), Vector2( -1.16104, -0.136978 ), Vector2( -1.16104, -0.136978 ), Vector2( -1.16104, -0.136978 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CaixaAtaque:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.15, 0.45, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.11478, -0.146351 ), Vector2( -2.11478, -0.146351 ), Vector2( -2.11478, -0.146351 ), Vector2( -2.11478, -0.146351 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CaixaAtaqueCabeca:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.15, 0.45, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.19374, -33.1316 ), Vector2( -1.19374, -33.1316 ), Vector2( -1.19374, -33.1316 ), Vector2( -1.19374, -33.1316 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -53,6 +112,57 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( -1.18921, -0.148651 ), Vector2( -1.18921, -0.148651 ), Vector2( -0.743256, -0.148651 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "espremendo"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.18921, -0.148651 ), Vector2( -1.35625, 16.5557 ), Vector2( -1.40045, 27.5399 ), Vector2( -1.40045, 27.5399 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ), Vector2( 1, 0.15 ), Vector2( 1, 0.15 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.16104, -0.136978 ), Vector2( -0.599809, 15.8581 ), Vector2( -0.529655, 27.223 ), Vector2( -0.529655, 27.223 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ), Vector2( 1, 0.15 ), Vector2( 1, 0.15 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -97,6 +207,39 @@ tracks/0/keys = {
 "update": 1,
 "values": [ Rect2( 8, 294, 38, 70 ), Rect2( 104, 294, 37, 70 ), Rect2( 199, 294, 36, 70 ), Rect2( 293, 294, 37, 70 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.91259, -0.520664 ), Vector2( -2.91259, -0.520664 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 7.36891, 32.5336 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 7.36891, 32.5336 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 7.12919, 0.483776 )
 
 [node name="Inimigo02" type="KinematicBody2D"]
 collision_layer = 2
@@ -104,19 +247,20 @@ collision_mask = 8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1.18921, -0.148651 )
+position = Vector2( 11.2975, 14.2705 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 8, 294, 38, 70 )
+region_rect = Rect2( 205, 136, 64, 39 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.944939, 0 )
-shape = SubResource( 1 )
+position = Vector2( -1.16104, -0.136978 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "andando"
 anims/andando = SubResource( 2 )
 anims/atingido = SubResource( 3 )
+anims/espremendo = SubResource( 7 )
 anims/morrendo = SubResource( 4 )
 anims/parado = SubResource( 5 )
 
@@ -127,26 +271,37 @@ stream = ExtResource( 3 )
 stream = ExtResource( 4 )
 
 [node name="CaixaAtaque" type="Area2D" parent="."]
+position = Vector2( -2.11478, -0.146351 )
 collision_layer = 16
 collision_mask = 192
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CaixaAtaque"]
 modulate = Color( 0.219608, 1, 0, 1 )
 position = Vector2( 0.944939, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -2.11478, -0.154163 )
 collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.944939, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 10 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 13.358, -0.236 )
 enabled = true
 cast_to = Vector2( 0, 45 )
 collision_mask = 8
+
+[node name="CaixaAtaqueCabeca" type="Area2D" parent="."]
+position = Vector2( -1.19374, -33.1316 )
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaixaAtaqueCabeca"]
+modulate = Color( 0.788235, 0.0588235, 0.992157, 1 )
+shape = SubResource( 11 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_personagem_terminou"]
 [connection signal="area_entered" from="CaixaAtaque" to="." method="colidiu_com_inimigo"]
+[connection signal="body_entered" from="CaixaAtaqueCabeca" to="." method="_personagem_pisou_no_inimigo"]

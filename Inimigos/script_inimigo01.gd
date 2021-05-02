@@ -62,6 +62,7 @@ func colidiu_com_inimigo(area):
 	
 	if(vida <= 0):
 		$".".set_collision_layer(0)
+		$CaixaAtaqueCabeca.queue_free()
 		$CaixaAtaque.queue_free()
 		$AudioStreamPlayer2.play()
 		$AnimationPlayer.play("morrendo")
@@ -73,3 +74,14 @@ func colidiu_com_inimigo(area):
 		yield(get_tree().create_timer(0.3), "timeout")
 		$AnimationPlayer.play("andando")
 		atingido = false
+
+
+func _personagem_pisou_no_inimigo(body):
+	atingido = true
+	body.movimentacao.y -= 600
+	$CaixaAtaqueCabeca.queue_free()
+	$CaixaAtaque.queue_free()
+	$AudioStreamPlayer2.play()
+	$AnimationPlayer.play("espremendo")
+	yield(get_tree().create_timer(1), "timeout")
+	queue_free()
