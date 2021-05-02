@@ -78,5 +78,5 @@ func spinner_ataque():
 		ScriptGlobal.QuantidadeSpinner -= 1
 		var cena_spinner_ataque = preload("res://componentes/spinner_giro.tscn")
 		var objeto_spinner = cena_spinner_ataque.instance()
-		objeto_spinner.global_position = $CaixaAtaquePivo.global_position
+		objeto_spinner.global_position = $OrigemSpinner.global_position
 		get_tree().root.add_child((objeto_spinner))

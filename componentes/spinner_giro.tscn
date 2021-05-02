@@ -23,26 +23,26 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 0 ]
 }
 
-[node name="spinner" type="Node2D"]
+[node name="Spinner" type="Node2D"]
 position = Vector2( 532.709, 316.133 )
 script = ExtResource( 2 )
 
-[node name="area2d" type="Area2D" parent="."]
+[node name="Spinner" type="Area2D" parent="."]
 position = Vector2( 0.264603, 0.580681 )
 collision_layer = 128
-collision_mask = 46
+collision_mask = 290
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner"]
 position = Vector2( -1.04538, -0.176498 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite" type="Sprite" parent="area2d"]
+[node name="Sprite" type="Sprite" parent="Spinner"]
 position = Vector2( -0.765869, -0.180298 )
 scale = Vector2( 0.176616, 0.157507 )
 texture = ExtResource( 1 )
@@ -53,6 +53,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="area2d"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spinner"]
 autoplay = "girando"
 anims/girando = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Spinner"]
+[connection signal="area_entered" from="Spinner" to="." method="_algo_colidiu_com_spinner"]
+[connection signal="body_entered" from="Spinner" to="." method="_algo_colidiu_com_spinner"]
+[connection signal="screen_exited" from="Spinner/VisibilityNotifier2D" to="." method="_spinner_saiu_da_tela"]

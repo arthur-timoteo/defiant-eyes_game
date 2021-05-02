@@ -183,10 +183,10 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Personagem"]
-position = Vector2( 0.110394, 2.46641 )
+position = Vector2( 10.4262, 1.8792 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 22, 663, 32, 66 )
+region_rect = Rect2( 390, 513, 46, 62 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -250,4 +250,7 @@ collision_mask = 2
 modulate = Color( 1, 0, 0.984314, 1 )
 position = Vector2( 0.916667, 0.25 )
 shape = SubResource( 9 )
+
+[node name="OrigemSpinner" type="Position2D" parent="Personagem"]
+position = Vector2( 28.9587, 2.38379 )
 [connection signal="body_entered" from="Personagem/CaixaDano" to="Personagem" method="_colidiu_com_inimigo"]

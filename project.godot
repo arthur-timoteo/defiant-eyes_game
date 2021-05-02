@@ -61,6 +61,7 @@ ui_atq_spinner={
 2d_physics/layer_6="CaixaDano"
 2d_physics/layer_7="AtaqueMarreta"
 2d_physics/layer_8="AtaqueSpinner"
+2d_physics/layer_9="Caixa"
 
 [rendering]
 

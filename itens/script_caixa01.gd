@@ -16,7 +16,8 @@ func _ready():
 #	pass
 
 func personagem_pisou(body: Node) -> void:
-	if body.name == "AtaqueMarreta":
+	print(body.name)
+	if(body.name == "AtaqueMarreta" || body.name == "Spinner"):
 		queue_free()
 	elif body.name == "Personagem":
 		$AnimationPlayer.play("pisada")
