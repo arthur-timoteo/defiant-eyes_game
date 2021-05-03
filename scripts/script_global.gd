@@ -15,3 +15,4 @@ var faseAtual = 2
 
 var QuantidadeSpinner = 0
 var QuantidadeVida = 0
+var QuantidadePontos = 0

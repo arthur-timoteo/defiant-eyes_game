@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var velocidade = 64
 export var vida = 2
+export var pontos = 100
 var movimentacao = Vector2.ZERO
 var direcao_movimento = 1
 var gravidade = 1200
@@ -61,6 +62,7 @@ func colidiu_com_inimigo(area):
 	atingido = true
 	
 	if(vida <= 0):
+		ScriptGlobal.QuantidadePontos += pontos
 		$".".set_collision_layer(0)
 		$CaixaAtaqueCabeca.queue_free()
 		$CaixaAtaque.queue_free()
@@ -79,6 +81,7 @@ func colidiu_com_inimigo(area):
 func _personagem_pisou_no_inimigo(body):
 	atingido = true
 	body.movimentacao.y -= 600
+	ScriptGlobal.QuantidadePontos += pontos
 	$CaixaAtaqueCabeca.queue_free()
 	$CaixaAtaque.queue_free()
 	$AudioStreamPlayer2.play()
