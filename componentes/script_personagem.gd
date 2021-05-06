@@ -71,7 +71,8 @@ func _colidiu_com_inimigo(body):
 	$AudioStreamPlayer2.play()
 	ScriptGlobal.QuantidadeVida -= 1
 	if(ScriptGlobal.QuantidadeVida <= 0):
-		get_tree().change_scene("res://telas/cena_fases.tscn")
+		ScriptGlobal.PersonagemMorreu = true
+		#get_tree().change_scene("res://telas/cena_fases.tscn")
 	else:
 		yield(get_tree().create_timer(0.4), "timeout")
 		recebeu_dano = false
