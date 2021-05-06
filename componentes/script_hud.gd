@@ -12,8 +12,8 @@ func _process(delta):
 	$Control1/Pontos.text = String(ScriptGlobal.QuantidadePontos)
 	$Control3/Tempo.text = str(int($Control3/Timer.time_left))
 	
-	if(ScriptGlobal.PersonagemMorreu):
-		_personagem_morreu()
+	if(ScriptGlobal.PersonagemMorreu && $PersonagemMorreu/Timer.is_stopped()):
+		$PersonagemMorreu/Timer.start()
 
 func _tempo_fase_acabou():
 	$Control3/Timer.stop()
@@ -25,6 +25,7 @@ func _tempo_fase_acabou():
 	get_tree().change_scene("res://telas/cena_fases.tscn")
 
 func _personagem_morreu():
+	$PersonagemMorreu/Timer.paused = true
 	$Control3/Timer.stop()
 	get_tree().paused = not get_tree().paused
 	$PersonagemMorreu.visible = true

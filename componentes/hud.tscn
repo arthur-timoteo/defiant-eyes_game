@@ -208,4 +208,8 @@ __meta__ = {
 
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="PersonagemMorreu"]
 stream = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="PersonagemMorreu"]
+wait_time = 0.1
 [connection signal="timeout" from="Control3/Timer" to="." method="_tempo_fase_acabou"]
+[connection signal="timeout" from="PersonagemMorreu/Timer" to="." method="_personagem_morreu"]
