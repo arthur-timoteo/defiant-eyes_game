@@ -172,12 +172,17 @@ height = 36.2745
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 10.329, 24.5776 )
 
-[node name="Personagem" type="KinematicBody2D"]
+[node name="Node2D" type="Node2D"]
+
+[node name="Personagem" type="KinematicBody2D" parent="."]
 scale = Vector2( 3, 3 )
 collision_mask = 30
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="Personagem"]
 position = Vector2( 10.4262, 1.8792 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -186,14 +191,14 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
 position = Vector2( 1.00635, 4.40294 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Personagem"]
 autoplay = "parado"
 anims/andando = SubResource( 2 )
 anims/ataque_marreta = SubResource( 3 )
@@ -202,14 +207,14 @@ anims/dano = SubResource( 5 )
 anims/parado = SubResource( 6 )
 anims/pulando = SubResource( 7 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Personagem"]
 stream = ExtResource( 3 )
 volume_db = -20.0
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Personagem"]
 stream = ExtResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
 current = true
 limit_left = 0
 limit_top = 0
@@ -225,28 +230,27 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CaixaAtaquePivo" type="Position2D" parent="."]
+[node name="CaixaAtaquePivo" type="Position2D" parent="Personagem"]
 
-[node name="AtaqueMarreta" type="Area2D" parent="CaixaAtaquePivo"]
+[node name="AtaqueMarreta" type="Area2D" parent="Personagem/CaixaAtaquePivo"]
 collision_layer = 64
 collision_mask = 36
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CaixaAtaquePivo/AtaqueMarreta"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/CaixaAtaquePivo/AtaqueMarreta"]
 position = Vector2( 34.4611, -7.24181 )
 rotation = -0.436332
 shape = SubResource( 8 )
 disabled = true
 
-[node name="CaixaDano" type="Area2D" parent="."]
+[node name="CaixaDano" type="Area2D" parent="Personagem"]
 collision_layer = 32
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CaixaDano"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem/CaixaDano"]
 modulate = Color( 1, 0, 0.984314, 1 )
 position = Vector2( 0.916667, 0.25 )
 shape = SubResource( 9 )
 
-[node name="OrigemSpinner" type="Position2D" parent="."]
+[node name="OrigemSpinner" type="Position2D" parent="Personagem"]
 position = Vector2( 28.9587, 2.38379 )
-scale = Vector2( 1, 1 )
-[connection signal="body_entered" from="CaixaDano" to="." method="_colidiu_com_inimigo"]
+[connection signal="body_entered" from="Personagem/CaixaDano" to="Personagem" method="_colidiu_com_inimigo"]

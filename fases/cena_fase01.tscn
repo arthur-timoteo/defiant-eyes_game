@@ -1,6 +1,5 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles/chao01.tres" type="TileSet" id=2]
 [ext_resource path="res://componentes/hud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fases/script_cena_fase01.gd" type="Script" id=4]
@@ -16,6 +15,7 @@
 [ext_resource path="res://itens/Spinner.tscn" type="PackedScene" id=14]
 [ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=15]
 [ext_resource path="res://itens/Caixa01.tscn" type="PackedScene" id=16]
+[ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Inimigos/Inimigo01.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Shader" id=1]
@@ -164,9 +164,11 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 262414, 0, 0, 262415, 1, 0, 262416, 2, 0, 590081, 0, 0, 590082, 1, 0, 590083, 1, 0, 590084, 1, 0, 590085, 2, 0, 917746, 0, 0, 917747, 1, 0, 917748, 1, 0, 917749, 1, 0, 917750, 1, 0, 917751, 2, 0, 1245263, 0, 0, 1245264, 1, 0, 1245265, 2, 0, 1245344, 0, 0, 1245345, 1, 0, 1245346, 1, 0, 1245347, 1, 0, 1245348, 1, 0, 1245349, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 2, 0, 1245518, 0, 0, 1245519, 1, 0, 1245520, 1, 0, 1245521, 2, 0, 1245555, 0, 0, 1245556, 1, 0, 1245557, 1, 0, 1245558, 1, 0, 1245559, 1, 0, 1245560, 1, 0, 1245561, 1, 0, 1245562, 1, 0, 1245563, 1, 0, 1245564, 1, 0, 1245565, 2, 0, 1245603, 0, 0, 1245604, 1, 0, 1245605, 1, 0, 1245606, 1, 0, 1245607, 1, 0, 1245608, 1, 0, 1245609, 1, 0, 1245610, 1, 0, 1245611, 1, 0, 1245612, 1, 0, 1245613, 1, 0, 1245614, 1, 0, 1245615, 1, 0, 1245616, 2, 0 )
 
-[node name="Personagem" parent="." instance=ExtResource( 1 )]
-position = Vector2( 96.9787, 750.683 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Personagem" parent="." instance=ExtResource( 17 )]
+position = Vector2( 96, 750.683 )
+scale = Vector2( 1.5, 1.5 )
+FasePersonagemCameraLimiteAbaixo = 1280
+FasePersonagemCameraLimiteDireta = 16512
 
 [node name="ColorRect24" type="ColorRect" parent="."]
 margin_left = 2358.09

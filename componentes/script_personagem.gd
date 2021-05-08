@@ -11,9 +11,16 @@ var atacando2
 var vida = 1
 var recebeu_dano = false
 
+export var FasePersonagemCameraLimiteAbaixo = 0
+export var FasePersonagemCameraLimiteDireta = 0
+export var FasePersonagemCameraLimiteAcima = 0
+export var FasePersonagemCameraLimiteEsquerda = 0
+
 func _ready():
-	$Camera2D.limit_bottom = 1280
-	$Camera2D.limit_right = 16512
+	$Camera2D.limit_bottom = FasePersonagemCameraLimiteAbaixo
+	$Camera2D.limit_right = FasePersonagemCameraLimiteDireta
+	$Camera2D.limit_left = FasePersonagemCameraLimiteEsquerda
+	$Camera2D.limit_top = FasePersonagemCameraLimiteAcima
 
 func _physics_process(delta):
 	movimentacao.y += gravidade * delta
