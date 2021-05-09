@@ -1,18 +1,10 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Node2D/SldMusica.value = ScriptGlobal.musicaVolume
 	$Node2D/SldSons.value = ScriptGlobal.sonsVolume
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	ScriptGlobal.musicaVolume = $Node2D/SldMusica.value
 	ScriptGlobal.sonsVolume = $Node2D/SldSons.value
 	

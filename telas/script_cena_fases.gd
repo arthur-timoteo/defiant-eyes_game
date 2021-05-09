@@ -2,12 +2,10 @@ extends Node2D
 
 var faseSelecionada = 0
 
-# Called when the node enters the scene tree for the first time.
 func _ready():	
 	faseSelecionada = ScriptGlobal.faseAtual
 	exibir_progressao()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if(faseSelecionada == 1 && Input.is_action_just_pressed("ui_right") && ScriptGlobal.faseAtual > 1):
 		faseSelecionada += 1	

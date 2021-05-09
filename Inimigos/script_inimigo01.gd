@@ -27,6 +27,7 @@ func _physics_process(delta):
 		else:
 			$Sprite.flip_h = false
 		
+		#Executa a forma de movimentação de acordo com a flag "movimentacao_rayCast"
 		if(movimentacao_rayCast):
 			if(!$RayCast2D.is_colliding()):
 				$AnimationPlayer.play("parado")
@@ -45,15 +46,14 @@ func _physics_process(delta):
 		
 	movimentacao = move_and_slide(movimentacao)
 
-func _animacao_personagem_terminou(anim_name):
+func _animacao_inimigo_terminou(anim_name):
 	if(anim_name == 'parado'):
-		$Sprite.flip_h != $Sprite.flip_h
 		if(movimentacao_rayCast):
 			$RayCast2D.position.x *= -1
 		direcao_movimento *= -1
 		$AnimationPlayer.play("andando")
 
-func colidiu_com_inimigo(area):
+func _algo_colidiu_com_inimigo(area):
 	if(area.name == "AtaqueMarreta"):
 		vida -= 1
 	else:

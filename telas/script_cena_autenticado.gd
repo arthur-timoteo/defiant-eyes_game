@@ -1,15 +1,12 @@
 extends Node2D
 
-# Declare member variables here.
 var opcao_selecionada = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Iniciar.modulate = Color("#ffff00")
 	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if(Input.is_action_just_pressed("ui_down") && opcao_selecionada < 3):
 		opcao_selecionada += 1
 		$AudioStreamPlayer.play()

@@ -114,7 +114,7 @@ tracks/1/keys = {
 "values": [ Vector2( -1.18921, -0.148651 ), Vector2( -1.18921, -0.148651 ), Vector2( -0.743256, -0.148651 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=4]
 resource_name = "espremendo"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -165,7 +165,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ), Vector2( 1, 0.15 ), Vector2( 1, 0.15 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=5]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -237,16 +237,16 @@ extents = Vector2( 7.36891, 32.5336 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 7.12919, 0.483776 )
 
-[node name="Inimigo02" type="KinematicBody2D"]
+[node name="Inimigo01" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 11.2975, 14.2705 )
+position = Vector2( -1.18921, -0.148651 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 205, 136, 64, 39 )
+region_rect = Rect2( 11, 390, 35, 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.16104, -0.136978 )
@@ -256,8 +256,8 @@ shape = SubResource( 1 )
 autoplay = "andando"
 anims/andando = SubResource( 2 )
 anims/atingido = SubResource( 3 )
-anims/espremendo = SubResource( 9 )
-anims/morrendo = SubResource( 10 )
+anims/espremendo = SubResource( 4 )
+anims/morrendo = SubResource( 5 )
 anims/parado = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -289,6 +289,6 @@ collision_layer = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaixaAtaqueCabeca"]
 modulate = Color( 0.788235, 0.0588235, 0.992157, 1 )
 shape = SubResource( 8 )
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_personagem_terminou"]
-[connection signal="area_entered" from="CaixaAtaque" to="." method="colidiu_com_inimigo"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_inimigo_terminou"]
+[connection signal="area_entered" from="CaixaAtaque" to="." method="_algo_colidiu_com_inimigo"]
 [connection signal="body_entered" from="CaixaAtaqueCabeca" to="." method="_personagem_pisou_no_inimigo"]

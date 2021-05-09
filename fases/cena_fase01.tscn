@@ -169,8 +169,8 @@ tile_data = PoolIntArray( 262414, 0, 0, 262415, 1, 0, 262416, 2, 0, 590081, 0, 0
 [node name="Personagem" parent="." instance=ExtResource( 17 )]
 position = Vector2( 96, 750.683 )
 scale = Vector2( 1.5, 1.5 )
-FasePersonagemCameraLimiteAbaixo = 1280
-FasePersonagemCameraLimiteDireta = 16512
+CameraLimiteAbaixo = 1280
+CameraLimiteDireta = 16512
 
 [node name="Vida" parent="." instance=ExtResource( 13 )]
 position = Vector2( 10741.4, 597.605 )

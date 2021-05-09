@@ -1,17 +1,15 @@
 extends Node2D
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.wait_time = rand_range(3.0, 4.0)
 	$Timer.start()		
 	
 	$AudioStreamPlayer.play()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$AudioStreamPlayer.volume_db = ScriptGlobal.musicaVolume
 
-#Instancia um objeto "Nuvem" na tela e reinicia o Timer
+#Gera as Nuvens em posições randômicas toda vez que o Timer chega a 0
 func criar_nuvem():
 	var nuvem = preload("res://componentes/nuvem.tscn")
 	var objeto_nuvem = nuvem.instance()

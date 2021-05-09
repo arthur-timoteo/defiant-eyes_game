@@ -6,7 +6,7 @@ func _ready():
 	$Caixa/Control3/Timer.wait_time = ScriptGlobal.TempoDaFase
 	$Caixa/Control3/Timer.start()
 
-func _process(delta):
+func _process(_delta):
 	$Caixa/Control2/QuantSpinners.text = String(ScriptGlobal.QuantidadeSpinner)
 	$Caixa/Control4/NumVidas.text = String(ScriptGlobal.QuantidadeVida)
 	$Caixa/Control1/Pontos.text = String(ScriptGlobal.QuantidadePontos)
