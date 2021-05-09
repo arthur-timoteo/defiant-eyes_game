@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://telas/cena_transicao_fim.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ativos/imagens/castelo_tela_fases.png" type="Texture" id=2]
 [ext_resource path="res://ativos/imagens/icone_fases_spritesheet.png" type="Texture" id=3]
 [ext_resource path="res://telas/script_cena_fases.gd" type="Script" id=4]
@@ -71,3 +72,5 @@ region_rect = Rect2( 107, 1, 51, 25 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="TransicaoFim" parent="." instance=ExtResource( 1 )]

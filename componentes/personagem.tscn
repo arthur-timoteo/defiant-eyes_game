@@ -248,5 +248,4 @@ shape = SubResource( 9 )
 
 [node name="OrigemSpinner" type="Position2D" parent="."]
 position = Vector2( 28.9587, 2.38379 )
-scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="CaixaDano" to="." method="_colidiu_com_inimigo"]

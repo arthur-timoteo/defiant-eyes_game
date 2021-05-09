@@ -1,6 +1,6 @@
 extends Area2D
 
-func _entrou_no_corpo_do_spinner(body):
+func _entrou_no_corpo_do_spinner(_body):
 	var som_coletado = round(rand_range(1, 5))
 	
 	$Sprite.queue_free()

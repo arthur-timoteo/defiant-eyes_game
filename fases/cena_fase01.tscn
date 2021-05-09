@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
+[ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles/chao01.tres" type="TileSet" id=2]
 [ext_resource path="res://componentes/hud.tscn" type="PackedScene" id=3]
 [ext_resource path="res://fases/script_cena_fase01.gd" type="Script" id=4]
@@ -17,6 +18,7 @@
 [ext_resource path="res://itens/Caixa01.tscn" type="PackedScene" id=16]
 [ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Inimigos/Inimigo01.tscn" type="PackedScene" id=18]
+[ext_resource path="res://componentes/caixa_som.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -170,228 +172,6 @@ scale = Vector2( 1.5, 1.5 )
 FasePersonagemCameraLimiteAbaixo = 1280
 FasePersonagemCameraLimiteDireta = 16512
 
-[node name="ColorRect24" type="ColorRect" parent="."]
-margin_left = 2358.09
-margin_top = 736.0
-margin_right = 2409.09
-margin_bottom = 787.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 2902.09
-margin_top = 212.082
-margin_right = 2953.09
-margin_bottom = 263.082
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 4399.78
-margin_top = 716.652
-margin_right = 4450.78
-margin_bottom = 767.652
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-margin_left = 3859.17
-margin_top = 716.652
-margin_right = 3910.17
-margin_bottom = 767.652
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect4" type="ColorRect" parent="."]
-margin_left = 5228.48
-margin_top = 497.936
-margin_right = 5279.48
-margin_bottom = 548.936
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect5" type="ColorRect" parent="."]
-margin_left = 5606.48
-margin_top = 720.936
-margin_right = 5657.48
-margin_bottom = 771.936
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect6" type="ColorRect" parent="."]
-margin_left = 6118.48
-margin_top = 718.936
-margin_right = 6169.48
-margin_bottom = 769.936
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect7" type="ColorRect" parent="."]
-margin_left = 6742.09
-margin_top = 480.0
-margin_right = 6967.09
-margin_bottom = 797.0
-color = Color( 0.392157, 0, 0, 1 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect8" type="ColorRect" parent="."]
-margin_left = 7718.58
-margin_top = 710.999
-margin_right = 7769.58
-margin_bottom = 761.999
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect9" type="ColorRect" parent="."]
-margin_left = 7732.05
-margin_top = 331.107
-margin_right = 7783.05
-margin_bottom = 382.107
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect10" type="ColorRect" parent="."]
-margin_left = 8224.81
-margin_top = 716.111
-margin_right = 8275.81
-margin_bottom = 767.111
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect11" type="ColorRect" parent="."]
-margin_left = 8334.81
-margin_top = 714.989
-margin_right = 8385.81
-margin_bottom = 765.989
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect13" type="ColorRect" parent="."]
-margin_left = 10404.6
-margin_top = 710.499
-margin_right = 10455.6
-margin_bottom = 761.499
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect15" type="ColorRect" parent="."]
-margin_left = 11100.1
-margin_top = 713.168
-margin_right = 11151.1
-margin_bottom = 764.168
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect16" type="ColorRect" parent="."]
-margin_left = 11299.0
-margin_top = 714.503
-margin_right = 11350.0
-margin_bottom = 765.503
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect17" type="ColorRect" parent="."]
-margin_left = 12013.1
-margin_top = 490.25
-margin_right = 12064.1
-margin_bottom = 541.25
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect18" type="ColorRect" parent="."]
-margin_left = 12974.2
-margin_top = 714.503
-margin_right = 13025.2
-margin_bottom = 765.503
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect19" type="ColorRect" parent="."]
-margin_left = 13448.1
-margin_top = 486.246
-margin_right = 13499.1
-margin_bottom = 537.246
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect20" type="ColorRect" parent="."]
-margin_left = 13725.7
-margin_top = 488.915
-margin_right = 13776.7
-margin_bottom = 539.915
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect21" type="ColorRect" parent="."]
-margin_left = 13593.6
-margin_top = 195.251
-margin_right = 13644.6
-margin_bottom = 246.251
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect22" type="ColorRect" parent="."]
-margin_left = 14544.0
-margin_top = 711.834
-margin_right = 14595.0
-margin_bottom = 762.834
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect23" type="ColorRect" parent="."]
-margin_left = 15447.7
-margin_top = 711.834
-margin_right = 15498.7
-margin_bottom = 762.834
-color = Color( 0.360784, 0.709804, 0.827451, 1 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Vida" parent="." instance=ExtResource( 13 )]
 position = Vector2( 10741.4, 597.605 )
 scale = Vector2( 0.15, 0.15 )
@@ -507,4 +287,10 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 4 )
+
+[node name="CaixaSom" parent="." instance=ExtResource( 19 )]
+position = Vector2( 15434, 736 )
+caminho = "res://telas/cena_fases.tscn"
+
+[node name="TransicaoIni" parent="." instance=ExtResource( 1 )]
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]

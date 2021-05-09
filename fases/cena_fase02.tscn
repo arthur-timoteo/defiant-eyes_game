@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://ativos/imagens/fundo_fase/5.png" type="Texture" id=1]
 [ext_resource path="res://ativos/imagens/fundo_fase/1.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://componentes/area_falsa.tscn" type="PackedScene" id=15]
 [ext_resource path="res://tiles/chao02.tres" type="TileSet" id=16]
 [ext_resource path="res://tiles/chao01.tres" type="TileSet" id=17]
+[ext_resource path="res://telas/cena_transicao_fim.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -171,167 +172,6 @@ scale = Vector2( 1.5, 1.5 )
 FasePersonagemCameraLimiteAbaixo = 1184
 FasePersonagemCameraLimiteDireta = 16512
 
-[node name="ColorRect24" type="ColorRect" parent="."]
-margin_left = 1691.77
-margin_top = 731.355
-margin_right = 1742.77
-margin_bottom = 782.355
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect25" type="ColorRect" parent="."]
-margin_left = 1792.0
-margin_top = 731.355
-margin_right = 1843.0
-margin_bottom = 782.355
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect26" type="ColorRect" parent="."]
-margin_left = 1888.0
-margin_top = 731.355
-margin_right = 1939.0
-margin_bottom = 782.355
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect27" type="ColorRect" parent="."]
-margin_left = 2016.0
-margin_top = 731.355
-margin_right = 2067.0
-margin_bottom = 782.355
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 4399.78
-margin_top = 876.652
-margin_right = 4450.78
-margin_bottom = 927.652
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect12" type="ColorRect" parent="."]
-margin_left = 4640.0
-margin_top = 880.936
-margin_right = 4691.0
-margin_bottom = 931.936
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-margin_left = 4064.0
-margin_top = 636.0
-margin_right = 4115.0
-margin_bottom = 687.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect8" type="ColorRect" parent="."]
-margin_left = 6283.3
-margin_top = 880.936
-margin_right = 6334.3
-margin_bottom = 931.936
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect10" type="ColorRect" parent="."]
-margin_left = 8000.0
-margin_top = 870.499
-margin_right = 8051.0
-margin_bottom = 921.499
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect11" type="ColorRect" parent="."]
-margin_left = 8334.81
-margin_top = 874.989
-margin_right = 8385.81
-margin_bottom = 925.989
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect14" type="ColorRect" parent="."]
-margin_left = 8736.0
-margin_top = 874.989
-margin_right = 8787.0
-margin_bottom = 925.989
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect13" type="ColorRect" parent="."]
-margin_left = 10240.0
-margin_top = 870.499
-margin_right = 10291.0
-margin_bottom = 921.499
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect28" type="ColorRect" parent="."]
-margin_left = 9632.0
-margin_top = 731.355
-margin_right = 9683.0
-margin_bottom = 782.355
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect15" type="ColorRect" parent="."]
-margin_left = 11100.1
-margin_top = 873.168
-margin_right = 11151.1
-margin_bottom = 924.168
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect16" type="ColorRect" parent="."]
-margin_left = 11299.0
-margin_top = 874.503
-margin_right = 11350.0
-margin_bottom = 925.503
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect23" type="ColorRect" parent="."]
-margin_left = 15424.0
-margin_top = 384.0
-margin_right = 15475.0
-margin_bottom = 435.0
-color = Color( 0.360784, 0.709804, 0.827451, 1 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Vida" parent="." instance=ExtResource( 14 )]
 position = Vector2( 10741.4, 757.605 )
 scale = Vector2( 0.15, 0.15 )
@@ -460,4 +300,6 @@ scale = Vector2( 51, 1 )
 [node name="AreaFalsa2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 9728, 1280 )
 scale = Vector2( 19, 1 )
+
+[node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]
