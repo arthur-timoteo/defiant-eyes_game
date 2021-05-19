@@ -1,22 +1,22 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://ativos/imagens/fundo_fase/5.png" type="Texture" id=1]
-[ext_resource path="res://ativos/imagens/fundo_fase/1.png" type="Texture" id=2]
-[ext_resource path="res://ativos/imagens/fundo_fase/6.png" type="Texture" id=3]
-[ext_resource path="res://ativos/imagens/fundo_fase/3.png" type="Texture" id=4]
-[ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=5]
-[ext_resource path="res://ativos/imagens/fundo_fase/0.png" type="Texture" id=6]
-[ext_resource path="res://ativos/imagens/fundo_fase/2.png" type="Texture" id=7]
-[ext_resource path="res://ativos/imagens/fundo_fase/4.png" type="Texture" id=8]
-[ext_resource path="res://fases/script_cena_fase02.gd" type="Script" id=9]
-[ext_resource path="res://Inimigos/Inimigo01.tscn" type="PackedScene" id=10]
-[ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=11]
-[ext_resource path="res://itens/Spinner.tscn" type="PackedScene" id=12]
-[ext_resource path="res://componentes/hud.tscn" type="PackedScene" id=13]
-[ext_resource path="res://itens/Vida.tscn" type="PackedScene" id=14]
-[ext_resource path="res://componentes/area_falsa.tscn" type="PackedScene" id=15]
-[ext_resource path="res://tiles/chao02.tres" type="TileSet" id=16]
-[ext_resource path="res://tiles/chao01.tres" type="TileSet" id=17]
+[ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=1]
+[ext_resource path="res://ativos/imagens/fundo_fase/0.png" type="Texture" id=2]
+[ext_resource path="res://ativos/imagens/fundo_fase/5.png" type="Texture" id=3]
+[ext_resource path="res://ativos/imagens/fundo_fase/2.png" type="Texture" id=4]
+[ext_resource path="res://ativos/imagens/fundo_fase/1.png" type="Texture" id=5]
+[ext_resource path="res://ativos/imagens/fundo_fase/3.png" type="Texture" id=6]
+[ext_resource path="res://ativos/imagens/fundo_fase/4.png" type="Texture" id=7]
+[ext_resource path="res://ativos/imagens/fundo_fase/6.png" type="Texture" id=8]
+[ext_resource path="res://tiles/chao01.tres" type="TileSet" id=9]
+[ext_resource path="res://tiles/chao02.tres" type="TileSet" id=10]
+[ext_resource path="res://fases/script_cena_fase03.gd" type="Script" id=11]
+[ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=12]
+[ext_resource path="res://itens/Vida.tscn" type="PackedScene" id=13]
+[ext_resource path="res://itens/Spinner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Inimigos/Inimigo01.tscn" type="PackedScene" id=15]
+[ext_resource path="res://componentes/area_falsa.tscn" type="PackedScene" id=16]
+[ext_resource path="res://componentes/hud.tscn" type="PackedScene" id=17]
 [ext_resource path="res://telas/cena_transicao_fim.tscn" type="PackedScene" id=18]
 [ext_resource path="res://componentes/caixa_som.tscn" type="PackedScene" id=19]
 [ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=20]
@@ -44,10 +44,10 @@ extents = Vector2( 10, 536 )
 extents = Vector2( 8428.02, 12.2697 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 1 )
 volume_db = -25.0
 autoplay = true
 
@@ -58,7 +58,7 @@ motion_mirroring = Vector2( 1538.4, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Ceu"]
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 centered = false
 
 [node name="Nuvens" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -69,7 +69,7 @@ motion_mirroring = Vector2( 1538.4, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Nuvens"]
 material = SubResource( 2 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 3 )
+texture = ExtResource( 8 )
 centered = false
 
 [node name="Colinas1" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -80,7 +80,7 @@ motion_mirroring = Vector2( 1538.4, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Colinas1"]
 position = Vector2( 0, 416 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 centered = false
 
 [node name="Colinas2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -91,7 +91,7 @@ motion_mirroring = Vector2( 1535, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Colinas2"]
 position = Vector2( 0, 470.251 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 centered = false
 
 [node name="Colinas3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -102,7 +102,7 @@ motion_mirroring = Vector2( 1536, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Colinas3"]
 position = Vector2( 0, 256 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 7 )
+texture = ExtResource( 4 )
 centered = false
 
 [node name="Arbustos" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -113,7 +113,7 @@ motion_mirroring = Vector2( 1440, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Arbustos"]
 position = Vector2( 0, -256 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 centered = false
 
 [node name="Solo" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -124,10 +124,10 @@ motion_mirroring = Vector2( 1538.4, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Solo"]
 position = Vector2( 0, 960 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 centered = false
 
-[node name="Hud" parent="." instance=ExtResource( 13 )]
+[node name="Hud" parent="." instance=ExtResource( 17 )]
 
 [node name="FaseParedeEsq" type="StaticBody2D" parent="."]
 position = Vector2( -9.91068, 672 )
@@ -152,7 +152,7 @@ shape = SubResource( 3 )
 [node name="Chao02" type="TileMap" parent="."]
 position = Vector2( 0, 128 )
 scale = Vector2( 2, 2 )
-tile_set = ExtResource( 16 )
+tile_set = ExtResource( 10 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 8
 collision_mask = 0
@@ -161,127 +161,127 @@ tile_data = PoolIntArray( 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0
 
 [node name="Chao01" type="TileMap" parent="."]
 position = Vector2( -9.91068, 192 )
-tile_set = ExtResource( 17 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 8
 collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -196327, 0, 0, -196326, 1, 0, -196325, 1, 0, -196324, 1, 0, -196323, 1, 0, -196322, 1, 0, -196321, 1, 0, -196320, 1, 0, -196319, 1, 0, -196318, 1, 0, -196317, 1, 0, -196316, 1, 0, -196315, 1, 0, -196314, 1, 0, -196313, 1, 0, -196312, 1, 0, -196311, 2, 0, -196297, 0, 0, -196296, 2, 0, -65258, 0, 0, -65257, 2, 0, 262420, 0, 0, 262421, 2, 0, 590095, 0, 0, 590096, 2, 0, 721358, 0, 0, 721359, 1, 0, 721360, 1, 0, 721361, 1, 0, 721362, 1, 0, 721363, 1, 0, 721364, 1, 0, 721365, 1, 0, 721366, 2, 0, 917583, 0, 0, 917584, 1, 0, 917585, 2, 0, 917690, 0, 0, 917691, 1, 0, 917692, 1, 0, 917693, 1, 0, 917694, 1, 0, 917695, 1, 0, 917696, 1, 0, 917697, 2, 0, 917760, 0, 0, 917761, 1, 0, 917762, 1, 0, 917763, 1, 0, 917764, 1, 0, 917765, 1, 0, 917766, 2, 0, 917959, 0, 0, 917960, 1, 0, 917961, 1, 0, 917962, 2, 0, 1048748, 0, 0, 1048749, 1, 0, 1048750, 1, 0, 1048751, 2, 0, 1245236, 0, 0, 1245237, 1, 0, 1245238, 1, 0, 1245239, 1, 0, 1245240, 1, 0, 1245241, 1, 0, 1245242, 1, 0, 1245243, 1, 0, 1245244, 1, 0, 1245245, 1, 0, 1245246, 1, 0, 1245247, 1, 0, 1245248, 1, 0, 1245249, 1, 0, 1245250, 2, 0, 1245263, 0, 0, 1245264, 1, 0, 1245265, 2, 0, 1245291, 0, 0, 1245292, 1, 0, 1245293, 1, 0, 1245294, 1, 0, 1245295, 2, 0, 1245347, 0, 0, 1245348, 1, 0, 1245349, 1, 0, 1245350, 1, 0, 1245351, 1, 0, 1245352, 1, 0, 1245353, 1, 0, 1245354, 1, 0, 1245355, 2, 0, 1245413, 0, 0, 1245414, 1, 0, 1245415, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245446, 0, 0, 1245447, 1, 0, 1245448, 1, 0, 1245449, 1, 0, 1245450, 1, 0, 1245451, 1, 0, 1245452, 1, 0, 1245453, 2, 0, 1245485, 0, 0, 1245486, 1, 0, 1245487, 1, 0, 1245488, 1, 0, 1245489, 2, 0, 1245518, 0, 0, 1245519, 1, 0, 1245520, 1, 0, 1245521, 2, 0, 1245555, 0, 0, 1245556, 1, 0, 1245557, 1, 0, 1245558, 1, 0, 1245559, 1, 0, 1245560, 1, 0, 1245561, 1, 0, 1245562, 1, 0, 1245563, 1, 0, 1245564, 1, 0, 1245565, 2, 0, 1245631, 0, 0, 1245632, 1, 0, 1245633, 2, 0, 1376564, 0, 0, 1376565, 1, 0, 1376566, 1, 0, 1376567, 2, 0 )
 
-[node name="Personagem" parent="." instance=ExtResource( 11 )]
+[node name="Personagem" parent="." instance=ExtResource( 12 )]
 position = Vector2( 96, 910.683 )
 scale = Vector2( 1.5, 1.5 )
 CameraLimiteAbaixo = 1184
 CameraLimiteDireta = 16512
 
-[node name="Vida" parent="." instance=ExtResource( 14 )]
+[node name="Vida" parent="." instance=ExtResource( 13 )]
 position = Vector2( 10741.4, 757.605 )
 scale = Vector2( 0.15, 0.15 )
 
-[node name="Spinner" parent="." instance=ExtResource( 12 )]
+[node name="Spinner" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2560, 600 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Spinner2" parent="." instance=ExtResource( 12 )]
+[node name="Spinner2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 9984, 64 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Inimigo01" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo01" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1693.89, 767.292 )
 movimentacao_rayCast = true
 esquerda_maxima = 1536
 direita_maxima = 2560
 
-[node name="Inimigo04" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo04" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1824, 767.292 )
 movimentacao_rayCast = true
 esquerda_maxima = 1536
 direita_maxima = 2560
 
-[node name="Inimigo05" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo05" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1920, 767.292 )
 movimentacao_rayCast = true
 esquerda_maxima = 1536
 direita_maxima = 2560
 
-[node name="Inimigo14" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo14" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2048, 767.292 )
 movimentacao_rayCast = true
 esquerda_maxima = 1536
 direita_maxima = 2560
 
-[node name="Inimigo02" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo02" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4672, 925.989 )
 esquerda_maxima = 4252
 direita_maxima = 5120
 
-[node name="Inimigo03" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo03" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4320, 925.989 )
 esquerda_maxima = 3500
 direita_maxima = 4352
 
-[node name="Inimigo06" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo06" parent="." instance=ExtResource( 15 )]
 position = Vector2( 6304, 924.168 )
 esquerda_maxima = 6272
 direita_maxima = 7168
 
-[node name="Inimigo07" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo07" parent="." instance=ExtResource( 15 )]
 position = Vector2( 8000, 923.932 )
 esquerda_maxima = 7424
 direita_maxima = 8100
 
-[node name="Inimigo08" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo08" parent="." instance=ExtResource( 15 )]
 position = Vector2( 8352, 920.76 )
 esquerda_maxima = 8192
 direita_maxima = 8960
 
-[node name="Inimigo15" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo15" parent="." instance=ExtResource( 15 )]
 position = Vector2( 8768, 924.168 )
 esquerda_maxima = 8704
 direita_maxima = 9472
 
-[node name="Inimigo09" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo09" parent="." instance=ExtResource( 15 )]
 position = Vector2( 10272, 926.965 )
 esquerda_maxima = 9984
 direita_maxima = 10752
 
-[node name="Inimigo19" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo19" parent="." instance=ExtResource( 15 )]
 position = Vector2( 9664, 767.056 )
 movimentacao_rayCast = true
 esquerda_maxima = 9728
 direita_maxima = 10688
 
-[node name="Inimigo10" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo10" parent="." instance=ExtResource( 15 )]
 position = Vector2( 11100.1, 927.111 )
 esquerda_maxima = 70752
 direita_maxima = 11300
 
-[node name="Inimigo11" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo11" parent="." instance=ExtResource( 15 )]
 position = Vector2( 11350, 928 )
 esquerda_maxima = 11264
 direita_maxima = 11904
 
-[node name="Inimigo12" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo12" parent="." instance=ExtResource( 15 )]
 position = Vector2( 12576, 928 )
 esquerda_maxima = 11264
 direita_maxima = 12928
 
-[node name="Inimigo18" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo18" parent="." instance=ExtResource( 15 )]
 position = Vector2( 13920, 928 )
 esquerda_maxima = 14976
 direita_maxima = 15488
 
-[node name="Inimigo13" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo13" parent="." instance=ExtResource( 15 )]
 position = Vector2( 12960, 925.753 )
 esquerda_maxima = 12416
 direita_maxima = 13440
 
-[node name="Inimigo16" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo16" parent="." instance=ExtResource( 15 )]
 position = Vector2( 13280, 925.753 )
 esquerda_maxima = 12800
 direita_maxima = 13824
 
-[node name="Inimigo17" parent="." instance=ExtResource( 10 )]
+[node name="Inimigo17" parent="." instance=ExtResource( 15 )]
 position = Vector2( 15456, 925.843 )
 esquerda_maxima = 11264
 direita_maxima = 11800
@@ -295,19 +295,19 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 4 )
 
-[node name="AreaFalsa" parent="." instance=ExtResource( 15 )]
+[node name="AreaFalsa" parent="." instance=ExtResource( 16 )]
 position = Vector2( 5696, 1280 )
 scale = Vector2( 51, 1 )
 
-[node name="AreaFalsa2" parent="." instance=ExtResource( 15 )]
+[node name="AreaFalsa2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 9728, 1280 )
 scale = Vector2( 19, 1 )
-
-[node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
 
 [node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
 
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
-position = Vector2( 15360, 320 )
+position = Vector2( 15328, 416 )
 caminho = "res://telas/cena_fases.tscn"
+
+[node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]

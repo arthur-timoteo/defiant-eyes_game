@@ -5,5 +5,6 @@ export var caminho : String
 
 func _personagem_encostou(body):
 	if(body.name == "Personagem"):
-		ScriptGlobal.faseAtual += 1
+		if(ScriptGlobal.faseAtual < 3):
+			ScriptGlobal.faseAtual += 1
 		mudador.mudar_cena(caminho)

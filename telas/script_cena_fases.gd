@@ -73,5 +73,8 @@ func direciona_fase():
 	elif(faseSelecionada == 2):
 		get_tree().change_scene("res://fases/cena_fase02.tscn")
 	elif(faseSelecionada == 3):
-		#get_tree().change_scene("res://fases/cena_fase03.tscn")
-		print("fase03")
+		get_tree().change_scene("res://fases/cena_fase03.tscn")
+
+
+func _voltar_ao_menu():
+	get_tree().change_scene("res://telas/cena_autenticado.tscn")
