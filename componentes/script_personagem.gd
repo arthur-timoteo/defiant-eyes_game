@@ -72,6 +72,12 @@ func _physics_process(delta):
 	if $AnimationPlayer.assigned_animation != animacao:
 		$AnimationPlayer.play(animacao)
 	
+	#Verifica se o Personagem colidiu com alguma plataforma que cai
+	for plataformas in get_slide_count():
+		var colisao = get_slide_collision(plataformas)
+		if(colisao.collider.has_method("personagem_plataforma_cai")):
+			colisao.collider.personagem_plataforma_cai(colisao, self)
+	
 
 func _colidiu_com_inimigo(_body):
 	recebeu_dano = true

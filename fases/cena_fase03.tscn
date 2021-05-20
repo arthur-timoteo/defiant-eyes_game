@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=1]
 [ext_resource path="res://ativos/imagens/fundo_fase/0.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=20]
 [ext_resource path="res://itens/Caixa01.tscn" type="PackedScene" id=21]
 [ext_resource path="res://componentes/Caixa02.tscn" type="PackedScene" id=22]
+[ext_resource path="res://componentes/plataforma_cai.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -168,7 +169,7 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 524741, 0, 0, 524742, 1, 0, 524743, 1, 0, 524744, 1, 0, 524745, 1, 0, 524746, 1, 0, 524747, 1, 0, 524748, 1, 0, 524749, 1, 0, 524750, 1, 0, 524751, 1, 0, 524752, 1, 0, 524753, 1, 0, 524754, 1, 0, 524755, 1, 0, 524756, 1, 0, 524757, 2, 0, 721343, 0, 0, 721344, 2, 0, 983374, 0, 0, 983375, 1, 0, 983376, 2, 0, 983384, 0, 0, 983385, 1, 0, 983386, 1, 0, 983387, 1, 0, 983388, 2, 0, 1048983, 0, 0, 1048984, 1, 0, 1048985, 2, 0, 1049017, 0, 0, 1049018, 1, 0, 1049019, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245552, 0, 0, 1245553, 2, 0, 1311014, 0, 0, 1311015, 1, 0, 1311016, 1, 0, 1311017, 1, 0, 1311018, 1, 0, 1311019, 1, 0, 1311020, 1, 0, 1311021, 1, 0, 1311022, 1, 0, 1311023, 1, 0, 1311024, 1, 0, 1311025, 1, 0, 1311026, 1, 0, 1311027, 1, 0, 1311028, 1, 0, 1311029, 1, 0, 1311030, 1, 0, 1311031, 1, 0, 1311032, 1, 0, 1311033, 2, 0, 1311048, 0, 0, 1311049, 1, 0, 1311050, 2, 0, 1311154, 0, 0, 1311155, 2, 0, 1376656, 0, 0, 1376657, 1, 0, 1376658, 2, 0 )
+tile_data = PoolIntArray( 524741, 0, 0, 524742, 1, 0, 524743, 1, 0, 524744, 1, 0, 524745, 1, 0, 524746, 1, 0, 524747, 1, 0, 524748, 1, 0, 524749, 1, 0, 524750, 1, 0, 524751, 1, 0, 524752, 1, 0, 524753, 1, 0, 524754, 1, 0, 524755, 1, 0, 524756, 1, 0, 524757, 2, 0, 721343, 0, 0, 721344, 2, 0, 983374, 0, 0, 983375, 1, 0, 983376, 2, 0, 983384, 0, 0, 983385, 1, 0, 983386, 1, 0, 983387, 1, 0, 983388, 2, 0, 1049017, 0, 0, 1049018, 1, 0, 1049019, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245552, 0, 0, 1245553, 2, 0, 1311014, 0, 0, 1311015, 1, 0, 1311016, 1, 0, 1311017, 1, 0, 1311018, 1, 0, 1311019, 1, 0, 1311020, 1, 0, 1311021, 1, 0, 1311022, 1, 0, 1311023, 1, 0, 1311024, 1, 0, 1311025, 1, 0, 1311026, 1, 0, 1311027, 1, 0, 1311028, 1, 0, 1311029, 1, 0, 1311030, 1, 0, 1311031, 1, 0, 1311032, 1, 0, 1311033, 2, 0, 1311048, 0, 0, 1311049, 1, 0, 1311050, 2, 0, 1311154, 0, 0, 1311155, 2, 0 )
 
 [node name="Personagem" parent="." instance=ExtResource( 12 )]
 position = Vector2( 96, 910.683 )
@@ -408,4 +409,12 @@ scale = Vector2( 0.6, 0.6 )
 [node name="Caixa10" parent="." instance=ExtResource( 21 )]
 position = Vector2( 11798.2, 779.478 )
 scale = Vector2( 0.6, 0.6 )
+
+[node name="PlataformaCai" parent="." instance=ExtResource( 23 )]
+position = Vector2( 12839.6, 880.06 )
+y_sera_destruido = 1280
+
+[node name="PlataformaCai2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 13061.9, 719.42 )
+y_sera_destruido = 1280
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]
