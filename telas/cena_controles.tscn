@@ -3,7 +3,7 @@
 [ext_resource path="res://componentes/cena_fundo_telas.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ativos/crash-a-like.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://telas/script_cena_controles.gd" type="Script" id=3]
-[ext_resource path="res://ativos/megaman_2.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ativos/RobotoCondensed-Bold.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 52
@@ -39,12 +39,13 @@ __meta__ = {
 
 [node name="Titulo" type="RichTextLabel" parent="Node2D"]
 modulate = Color( 0.992157, 1, 0, 1 )
-margin_left = 256.873
-margin_top = 14.2202
-margin_right = 787.873
-margin_bottom = 81.2202
+margin_left = 371.491
+margin_top = 15.1225
+margin_right = 681.491
+margin_bottom = 81.1225
 custom_fonts/normal_font = SubResource( 1 )
 text = "CONSTROLES"
+scroll_active = false
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -62,25 +63,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
-margin_left = 36.6733
-margin_top = 239.596
-margin_right = 692.673
-margin_bottom = 310.596
+[node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
+margin_left = 34.6197
+margin_top = 244.709
+margin_right = 690.619
+margin_bottom = 315.709
 custom_fonts/normal_font = SubResource( 3 )
-text = "ATACAR:        A"
+text = "PULAR:          ^ "
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
-margin_left = 35.4134
-margin_top = 305.03
-margin_right = 691.413
-margin_bottom = 376.03
+[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
+margin_left = 34.2922
+margin_top = 309.442
+margin_right = 690.292
+margin_bottom = 380.442
 custom_fonts/normal_font = SubResource( 3 )
-text = "PULAR:         ^ "
+text = "MARRETADA:       D"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -92,7 +93,7 @@ margin_top = 375.791
 margin_right = 688.818
 margin_bottom = 446.791
 custom_fonts/normal_font = SubResource( 3 )
-text = "TELA DE OPÇÕES: ESC"
+text = "LANÇAR SPINNER:   S"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
