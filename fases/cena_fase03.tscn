@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=1]
 [ext_resource path="res://ativos/imagens/fundo_fase/0.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://componentes/caixa_som.tscn" type="PackedScene" id=19]
 [ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=20]
 [ext_resource path="res://itens/Caixa01.tscn" type="PackedScene" id=21]
+[ext_resource path="res://componentes/Caixa02.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -167,7 +168,7 @@ cell_size = Vector2( 32, 32 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 524741, 0, 0, 524742, 1, 0, 524743, 1, 0, 524744, 1, 0, 524745, 1, 0, 524746, 1, 0, 524747, 1, 0, 524748, 1, 0, 524749, 1, 0, 524750, 1, 0, 524751, 1, 0, 524752, 1, 0, 524753, 1, 0, 524754, 1, 0, 524755, 1, 0, 524756, 1, 0, 524757, 2, 0, 721343, 0, 0, 721344, 2, 0, 983374, 0, 0, 983375, 1, 0, 983376, 2, 0, 983384, 0, 0, 983385, 1, 0, 983386, 1, 0, 983387, 1, 0, 983388, 2, 0, 1048983, 0, 0, 1048984, 1, 0, 1048985, 2, 0, 1049017, 0, 0, 1049018, 1, 0, 1049019, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245518, 0, 0, 1245519, 1, 0, 1245520, 1, 0, 1245521, 2, 0, 1245552, 0, 0, 1245553, 2, 0, 1311014, 0, 0, 1311015, 1, 0, 1311016, 1, 0, 1311017, 1, 0, 1311018, 1, 0, 1311019, 1, 0, 1311020, 1, 0, 1311021, 1, 0, 1311022, 1, 0, 1311023, 1, 0, 1311024, 1, 0, 1311025, 1, 0, 1311026, 1, 0, 1311027, 1, 0, 1311028, 1, 0, 1311029, 1, 0, 1311030, 1, 0, 1311031, 1, 0, 1311032, 1, 0, 1311033, 2, 0, 1311048, 0, 0, 1311049, 1, 0, 1311050, 2, 0, 1311154, 0, 0, 1311155, 2, 0, 1376656, 0, 0, 1376657, 1, 0, 1376658, 2, 0 )
+tile_data = PoolIntArray( 524741, 0, 0, 524742, 1, 0, 524743, 1, 0, 524744, 1, 0, 524745, 1, 0, 524746, 1, 0, 524747, 1, 0, 524748, 1, 0, 524749, 1, 0, 524750, 1, 0, 524751, 1, 0, 524752, 1, 0, 524753, 1, 0, 524754, 1, 0, 524755, 1, 0, 524756, 1, 0, 524757, 2, 0, 721343, 0, 0, 721344, 2, 0, 983374, 0, 0, 983375, 1, 0, 983376, 2, 0, 983384, 0, 0, 983385, 1, 0, 983386, 1, 0, 983387, 1, 0, 983388, 2, 0, 1048983, 0, 0, 1048984, 1, 0, 1048985, 2, 0, 1049017, 0, 0, 1049018, 1, 0, 1049019, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245552, 0, 0, 1245553, 2, 0, 1311014, 0, 0, 1311015, 1, 0, 1311016, 1, 0, 1311017, 1, 0, 1311018, 1, 0, 1311019, 1, 0, 1311020, 1, 0, 1311021, 1, 0, 1311022, 1, 0, 1311023, 1, 0, 1311024, 1, 0, 1311025, 1, 0, 1311026, 1, 0, 1311027, 1, 0, 1311028, 1, 0, 1311029, 1, 0, 1311030, 1, 0, 1311031, 1, 0, 1311032, 1, 0, 1311033, 2, 0, 1311048, 0, 0, 1311049, 1, 0, 1311050, 2, 0, 1311154, 0, 0, 1311155, 2, 0, 1376656, 0, 0, 1376657, 1, 0, 1376658, 2, 0 )
 
 [node name="Personagem" parent="." instance=ExtResource( 12 )]
 position = Vector2( 96, 910.683 )
@@ -176,11 +177,11 @@ CameraLimiteAbaixo = 1184
 CameraLimiteDireta = 16512
 
 [node name="Vida" parent="." instance=ExtResource( 13 )]
-position = Vector2( 10741.4, 757.605 )
+position = Vector2( 14508.3, 768.284 )
 scale = Vector2( 0.15, 0.15 )
 
 [node name="Spinner" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2560, 600 )
+position = Vector2( 1154.73, 676.375 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Inimigo01" parent="." instance=ExtResource( 15 )]
@@ -308,46 +309,6 @@ caminho = "res://telas/cena_fases.tscn"
 
 [node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
 
-[node name="Caixa01" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2278.07, 941.29 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa02" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2458.83, 941.29 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa03" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2458.83, 901.452 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa04" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2649.53, 939.592 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa05" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2649.53, 898.717 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa06" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2649.53, 858.238 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa07" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2810.05, 938.848 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa08" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2810.75, 897.836 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa09" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2810.75, 856.824 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa10" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2810.75, 816.519 )
-scale = Vector2( 0.6, 0.6 )
-
 [node name="Caixa11" parent="." instance=ExtResource( 21 )]
 position = Vector2( 9411.69, 939.507 )
 scale = Vector2( 0.6, 0.6 )
@@ -356,11 +317,95 @@ scale = Vector2( 0.6, 0.6 )
 position = Vector2( 9412.53, 897.462 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Caixa13" parent="." instance=ExtResource( 21 )]
-position = Vector2( 10012.3, 939.039 )
+[node name="Caixa15" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2278.11, 941 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Caixa14" parent="." instance=ExtResource( 21 )]
-position = Vector2( 10012.3, 898.722 )
+[node name="Caixa16" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2458.52, 940.819 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa17" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2458.53, 901.253 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa18" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.72, 940.775 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa19" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.72, 901.208 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa20" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.69, 861.602 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa21" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.65, 940.775 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa22" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.65, 901.208 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa23" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.62, 861.602 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa24" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.6, 822.068 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa25" parent="." instance=ExtResource( 22 )]
+position = Vector2( 10013, 940.812 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa26" parent="." instance=ExtResource( 22 )]
+position = Vector2( 10013, 901.211 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa01" parent="." instance=ExtResource( 21 )]
+position = Vector2( 972.412, 940.146 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02" parent="." instance=ExtResource( 21 )]
+position = Vector2( 3392.82, 940.118 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5494.84, 939.505 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa04" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5774.49, 940.172 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa05" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5665.03, 755.964 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa06" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8222.98, 779.262 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa07" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7051, 822.096 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa08" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8498.96, 592.339 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa09" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12453, 939.669 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa13" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12905.4, 550.846 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa10" parent="." instance=ExtResource( 21 )]
+position = Vector2( 11798.2, 779.478 )
 scale = Vector2( 0.6, 0.6 )
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]
