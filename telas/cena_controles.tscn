@@ -44,7 +44,7 @@ margin_top = 15.1225
 margin_right = 681.491
 margin_bottom = 81.1225
 custom_fonts/normal_font = SubResource( 1 )
-text = "CONSTROLES"
+text = "CONTROLES"
 scroll_active = false
 __meta__ = {
 "_edit_group_": true,
