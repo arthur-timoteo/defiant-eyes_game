@@ -73,6 +73,7 @@ func direciona_fase():
 	elif(faseSelecionada == 2):
 		get_tree().change_scene("res://fases/cena_fase02.tscn")
 	elif(faseSelecionada == 3):
+		ScriptGlobal.TempoDaFase = 150
 		get_tree().change_scene("res://fases/cena_fase03.tscn")
 
 
