@@ -252,13 +252,13 @@ esquerda_maxima = 9728
 direita_maxima = 10688
 
 [node name="Inimigo10" parent="." instance=ExtResource( 10 )]
-position = Vector2( 11100.1, 927.111 )
-esquerda_maxima = 70752
+position = Vector2( 11097.8, 926.965 )
+esquerda_maxima = 10496
 direita_maxima = 11300
 
 [node name="Inimigo11" parent="." instance=ExtResource( 10 )]
 position = Vector2( 11350, 928 )
-esquerda_maxima = 11264
+esquerda_maxima = 10880
 direita_maxima = 11904
 
 [node name="Inimigo12" parent="." instance=ExtResource( 10 )]
