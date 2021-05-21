@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://ativos/imagens/caixa01.png" type="Texture" id=1]
 [ext_resource path="res://itens/script_caixa01.gd" type="Script" id=2]
+[ext_resource path="res://ativos/sons/caixa01_pisada.wav" type="AudioStream" id=3]
+[ext_resource path="res://ativos/sons/caixa01_quebrada.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34.0001, 33.0715 )
@@ -71,5 +73,11 @@ shape = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/pisada = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="area_entered" from="CaixaAtaque1" to="." method="personagem_pisou"]
 [connection signal="body_entered" from="CaixaAtaque2" to="." method="personagem_pisou"]

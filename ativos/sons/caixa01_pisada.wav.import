@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/caixa01_pisada.wav-7e7bea7ef134fb3cecc8175120f5fa30.sample"
+
+[deps]
+
+source_file="res://ativos/sons/caixa01_pisada.wav"
+dest_files=[ "res://.import/caixa01_pisada.wav-7e7bea7ef134fb3cecc8175120f5fa30.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
