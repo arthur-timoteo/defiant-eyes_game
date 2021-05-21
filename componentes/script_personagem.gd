@@ -84,6 +84,7 @@ func _colidiu_com_inimigo(_body):
 	$AudioStreamPlayer2.play()
 	ScriptGlobal.QuantidadeVida -= 1
 	if(ScriptGlobal.QuantidadeVida <= 0):
+		ScriptGlobal.QuantidadeVida = 0
 		ScriptGlobal.PersonagemMorreu = true
 	else:
 		yield(get_tree().create_timer(0.4), "timeout")
