@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://ativos/imagens/fundo_fase/5.png" type="Texture" id=1]
 [ext_resource path="res://ativos/imagens/fundo_fase/1.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://telas/cena_transicao_fim.tscn" type="PackedScene" id=18]
 [ext_resource path="res://componentes/caixa_som.tscn" type="PackedScene" id=19]
 [ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=20]
+[ext_resource path="res://itens/Caixa01.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -282,9 +283,9 @@ esquerda_maxima = 12800
 direita_maxima = 13824
 
 [node name="Inimigo17" parent="." instance=ExtResource( 10 )]
-position = Vector2( 15456, 925.843 )
-esquerda_maxima = 11264
-direita_maxima = 11800
+position = Vector2( 14800.4, 927.115 )
+esquerda_maxima = 14400
+direita_maxima = 15072
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 8243.39, 1193.19 )
@@ -310,4 +311,40 @@ scale = Vector2( 19, 1 )
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
 position = Vector2( 15360, 320 )
 caminho = "res://telas/cena_fases.tscn"
+
+[node name="Caixa01" parent="." instance=ExtResource( 21 )]
+position = Vector2( 3551.37, 779.654 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5807.96, 723.651 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8527.42, 212.386 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa04" parent="." instance=ExtResource( 21 )]
+position = Vector2( 9262.91, 75.7673 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa05" parent="." instance=ExtResource( 21 )]
+position = Vector2( 10484.9, 75.6593 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa06" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12041, 779.586 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa07" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12180.4, 659.62 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa08" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12243.4, 532.033 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa09" parent="." instance=ExtResource( 21 )]
+position = Vector2( 14335.1, 537.696 )
+scale = Vector2( 0.6, 0.6 )
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]

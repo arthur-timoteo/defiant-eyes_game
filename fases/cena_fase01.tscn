@@ -181,7 +181,15 @@ position = Vector2( 8677.04, 128.848 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Caixa01" parent="." instance=ExtResource( 16 )]
-position = Vector2( 247.664, 779.677 )
+position = Vector2( 1066, 779.813 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02" parent="." instance=ExtResource( 16 )]
+position = Vector2( 8273.78, 300.124 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03" parent="." instance=ExtResource( 16 )]
+position = Vector2( 9235.12, 140.504 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="Inimigo01" parent="." instance=ExtResource( 18 )]
