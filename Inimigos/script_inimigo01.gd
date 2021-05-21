@@ -80,7 +80,7 @@ func _algo_colidiu_com_inimigo(area):
 
 func _personagem_pisou_no_inimigo(body):
 	atingido = true
-	body.movimentacao.y -= 600
+	body.movimentacao.y = body.pulo_altura
 	ScriptGlobal.QuantidadePontos += pontos
 	$CaixaAtaqueCabeca.queue_free()
 	$CaixaAtaque.queue_free()

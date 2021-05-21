@@ -235,7 +235,7 @@ tracks/2/keys = {
 extents = Vector2( 7.36891, 32.5336 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 7.12919, 0.483776 )
+extents = Vector2( 7.33917, 0.900391 )
 
 [node name="Inimigo01" type="KinematicBody2D"]
 collision_layer = 2
@@ -288,6 +288,7 @@ collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaixaAtaqueCabeca"]
 modulate = Color( 0.788235, 0.0588235, 0.992157, 1 )
+position = Vector2( 0.052556, -0.341618 )
 shape = SubResource( 8 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_animacao_inimigo_terminou"]
 [connection signal="area_entered" from="CaixaAtaque" to="." method="_algo_colidiu_com_inimigo"]
