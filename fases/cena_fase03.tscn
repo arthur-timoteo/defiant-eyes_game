@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://ativos/sons/fases_fundo.wav" type="AudioStream" id=1]
 [ext_resource path="res://ativos/imagens/fundo_fase/0.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://componentes/Caixa02.tscn" type="PackedScene" id=22]
 [ext_resource path="res://componentes/plataforma_cai.tscn" type="PackedScene" id=23]
 [ext_resource path="res://componentes/plataforma_movimenta.tscn" type="PackedScene" id=24]
+[ext_resource path="res://ativos/imagens/caixa-jbl.png" type="Texture" id=25]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -312,6 +313,11 @@ scale = Vector2( 70, 1 )
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
 position = Vector2( 16319.1, 908.703 )
 caminho = "res://telas/cena_fases.tscn"
+
+[node name="Sprite" type="Sprite" parent="CaixaSom"]
+position = Vector2( 35.957, 4.49512 )
+scale = Vector2( 0.222, 0.222 )
+texture = ExtResource( 25 )
 
 [node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
 

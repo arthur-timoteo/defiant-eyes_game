@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://telas/cena_transicao_ini.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tiles/chao01.tres" type="TileSet" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://componentes/personagem.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Inimigos/Inimigo01.tscn" type="PackedScene" id=18]
 [ext_resource path="res://componentes/caixa_som.tscn" type="PackedScene" id=19]
+[ext_resource path="res://ativos/imagens/caixa-jbl.png" type="Texture" id=20]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -299,6 +300,11 @@ shape = SubResource( 4 )
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
 position = Vector2( 15434, 736 )
 caminho = "res://telas/cena_fases.tscn"
+
+[node name="Sprite" type="Sprite" parent="CaixaSom"]
+position = Vector2( 32.4961, 7.40283 )
+scale = Vector2( 0.222051, 0.222051 )
+texture = ExtResource( 20 )
 
 [node name="TransicaoIni" parent="." instance=ExtResource( 1 )]
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]
