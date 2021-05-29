@@ -15,6 +15,13 @@ export var direita_maxima = 1000
 func _ready():
 	if(!movimentacao_rayCast):
 		$RayCast2D.enabled = false
+		
+	if(ScriptGlobal.DificuldadeJogo == 1):
+		vida = 2
+	elif(ScriptGlobal.DificuldadeJogo == 2):
+		vida = 4
+	else:
+		vida = 6
 
 func _physics_process(delta):	
 	movimentacao.y += gravidade * delta 
@@ -79,12 +86,18 @@ func _algo_colidiu_com_inimigo(area):
 
 
 func _personagem_pisou_no_inimigo(body):
+	vida -=2
+	
 	atingido = true
 	body.movimentacao.y = body.pulo_altura
-	ScriptGlobal.QuantidadePontos += pontos
-	$CaixaAtaqueCabeca.queue_free()
-	$CaixaAtaque.queue_free()
 	$AudioStreamPlayer2.play()
 	$AnimationPlayer.play("espremendo")
 	yield(get_tree().create_timer(1), "timeout")
-	queue_free()
+	$AnimationPlayer.play("andando")
+	atingido = false
+	
+	if(vida <= 0):
+		ScriptGlobal.QuantidadePontos += pontos
+		$CaixaAtaqueCabeca.queue_free()
+		$CaixaAtaque.queue_free()
+		queue_free()

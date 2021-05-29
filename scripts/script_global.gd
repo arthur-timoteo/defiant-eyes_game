@@ -18,3 +18,4 @@ var QuantidadeVida = 0
 var QuantidadePontos = 0
 var TempoDaFase = 120
 var PersonagemMorreu = false
+var DificuldadeJogo = 1
