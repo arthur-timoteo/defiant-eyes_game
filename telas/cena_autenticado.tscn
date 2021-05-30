@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ativos/crash-a-like.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://componentes/cena_fundo_telas.tscn" type="PackedScene" id=2]
@@ -18,6 +18,18 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 62
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 62
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=3]
 size = 62
 font_data = ExtResource( 1 )
@@ -29,10 +41,10 @@ script = ExtResource( 3 )
 
 [node name="Iniciar" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 31.0
-margin_top = 366.785
-margin_right = 229.0
-margin_bottom = 425.785
+margin_left = 28.7551
+margin_top = 320.764
+margin_right = 226.755
+margin_bottom = 379.764
 custom_fonts/normal_font = SubResource( 1 )
 text = " INICIAR"
 __meta__ = {
@@ -42,10 +54,10 @@ __meta__ = {
 
 [node name="Opcoes" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 31.7568
-margin_top = 437.596
-margin_right = 226.757
-margin_bottom = 494.596
+margin_left = 29.5119
+margin_top = 391.575
+margin_right = 224.512
+margin_bottom = 448.575
 custom_fonts/normal_font = SubResource( 2 )
 text = " OPÇÕES"
 __meta__ = {
@@ -55,12 +67,26 @@ __meta__ = {
 
 [node name="Controles" type="RichTextLabel" parent="."]
 modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
-margin_left = 30.0
-margin_top = 503.0
-margin_right = 300.0
-margin_bottom = 560.0
-custom_fonts/normal_font = SubResource( 2 )
+margin_left = 27.7551
+margin_top = 456.979
+margin_right = 297.755
+margin_bottom = 513.979
+custom_fonts/normal_font = SubResource( 4 )
 text = " CONTROLES"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Desempenho" type="RichTextLabel" parent="."]
+modulate = Color( 0.87451, 0.443137, 0.14902, 1 )
+margin_left = 31.7551
+margin_top = 522.979
+margin_right = 321.755
+margin_bottom = 579.979
+custom_fonts/normal_font = SubResource( 5 )
+meta_underlined = false
+text = " DESEMPENHO"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
