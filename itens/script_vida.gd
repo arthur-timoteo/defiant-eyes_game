@@ -1,5 +1,8 @@
 extends Area2D
 
+func _ready():
+	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
+
 func _corpo_entrou_na_vida(_body):
 	$Sprite.queue_free()
 	$CollisionShape2D.queue_free()

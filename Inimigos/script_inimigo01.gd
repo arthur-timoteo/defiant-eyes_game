@@ -22,6 +22,9 @@ func _ready():
 		vida = 4
 	else:
 		vida = 6
+		
+	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer2.volume_db = ScriptGlobal.sonsVolume
 
 func _physics_process(delta):	
 	movimentacao.y += gravidade * delta 

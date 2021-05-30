@@ -21,6 +21,8 @@ func _ready():
 	$Camera2D.limit_right = CameraLimiteDireta
 	$Camera2D.limit_left = CameraLimiteEsquerda
 	$Camera2D.limit_top = CameraLimiteAcima
+	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer2.volume_db = ScriptGlobal.sonsVolume
 
 func _physics_process(delta):
 	movimentacao.y += gravidade * delta

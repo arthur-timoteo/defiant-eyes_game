@@ -5,6 +5,8 @@ func _ready():
 	$Caixa/PersonagemMorreu.visible = false
 	$Caixa/Control3/Timer.wait_time = ScriptGlobal.TempoDaFase
 	$Caixa/Control3/Timer.start()
+	$Caixa/TempoAcabou/AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
+	$Caixa/PersonagemMorreu/AudioStreamPlayer1.volume_db = ScriptGlobal.sonsVolume
 
 func _process(_delta):
 	$Caixa/Control2/QuantSpinners.text = String(ScriptGlobal.QuantidadeSpinner)

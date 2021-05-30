@@ -6,6 +6,9 @@ var numero_pisadas = 0
 func _ready():
 	#Gera aleatóriamente o número de quantas vezes a caixa pode ser pisada
 	numero_pisadas = randi() % 5 + 1
+	
+	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer2.volume_db = ScriptGlobal.sonsVolume
 
 func personagem_pisou(body: Node) -> void:
 	if(body.name == "AtaqueMarreta" || body.name == "Spinner"):

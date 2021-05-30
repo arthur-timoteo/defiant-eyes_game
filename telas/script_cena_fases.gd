@@ -5,6 +5,7 @@ var faseSelecionada = 0
 func _ready():	
 	faseSelecionada = ScriptGlobal.faseAtual
 	exibir_progressao()
+	$AudioStreamPlayer.volume_db = ScriptGlobal.sonsVolume
 
 func _process(_delta):
 	if(faseSelecionada == 1 && Input.is_action_just_pressed("ui_right") && ScriptGlobal.faseAtual > 1):

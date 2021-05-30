@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ativos/imagens/caixa02.png" type="Texture" id=1]
-[ext_resource path="res://itens/script_caixa01.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 33.0921 )
@@ -9,7 +8,6 @@ extents = Vector2( 32, 33.0921 )
 [node name="Caixa02" type="KinematicBody2D"]
 collision_layer = 8
 collision_mask = 3
-script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )

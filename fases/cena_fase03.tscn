@@ -51,6 +51,8 @@ extents = Vector2( 8428.02, 12.2697 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 11 )
 
+[node name="Hud" parent="." instance=ExtResource( 17 )]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 volume_db = -25.0
@@ -132,8 +134,6 @@ scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Hud" parent="." instance=ExtResource( 17 )]
-
 [node name="FaseParedeEsq" type="StaticBody2D" parent="."]
 position = Vector2( -9.91068, 672 )
 collision_layer = 8
@@ -173,23 +173,172 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 524741, 0, 0, 524742, 1, 0, 524743, 1, 0, 524744, 1, 0, 524745, 1, 0, 524746, 1, 0, 524747, 1, 0, 524748, 1, 0, 524749, 1, 0, 524750, 1, 0, 524751, 1, 0, 524752, 1, 0, 524753, 1, 0, 524754, 1, 0, 524755, 1, 0, 524756, 1, 0, 524757, 2, 0, 721343, 0, 0, 721344, 2, 0, 983374, 0, 0, 983375, 1, 0, 983376, 2, 0, 983384, 0, 0, 983385, 1, 0, 983386, 1, 0, 983387, 1, 0, 983388, 2, 0, 1049017, 0, 0, 1049018, 1, 0, 1049019, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245552, 0, 0, 1245553, 2, 0, 1311014, 0, 0, 1311015, 1, 0, 1311016, 1, 0, 1311017, 1, 0, 1311018, 1, 0, 1311019, 1, 0, 1311020, 1, 0, 1311021, 1, 0, 1311022, 1, 0, 1311023, 1, 0, 1311024, 1, 0, 1311025, 1, 0, 1311026, 1, 0, 1311027, 1, 0, 1311028, 1, 0, 1311029, 1, 0, 1311030, 1, 0, 1311031, 1, 0, 1311032, 1, 0, 1311033, 2, 0, 1311048, 0, 0, 1311049, 1, 0, 1311050, 2, 0, 1311154, 0, 0, 1311155, 2, 0 )
 
-[node name="Personagem" parent="." instance=ExtResource( 12 )]
-position = Vector2( 96, 910.683 )
-scale = Vector2( 1.5, 1.5 )
-CameraLimiteAbaixo = 1184
-CameraLimiteDireta = 16512
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 8243.39, 1193.19 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Vida" parent="." instance=ExtResource( 13 )]
-position = Vector2( 14508.3, 768.284 )
-scale = Vector2( 0.15, 0.15 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
 
-[node name="Vida2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 12910.3, 430.921 )
-scale = Vector2( 0.15, 0.15 )
+[node name="AreaFalsa" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1162, 1280 )
+scale = Vector2( 18, 1 )
 
-[node name="Spinner" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1154.73, 676.375 )
-scale = Vector2( 0.3, 0.3 )
+[node name="AreaFalsa3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3200, 1280 )
+scale = Vector2( 14, 1 )
+
+[node name="AreaFalsa4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3584, 1280 )
+scale = Vector2( 14, 1 )
+
+[node name="AreaFalsa5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 4256, 1280 )
+scale = Vector2( 12, 1 )
+
+[node name="AreaFalsa6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5248, 1280 )
+scale = Vector2( 9, 1 )
+
+[node name="AreaFalsa7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 6784, 1280 )
+scale = Vector2( 95, 1 )
+
+[node name="AreaFalsa2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 10688, 1280 )
+scale = Vector2( 48, 1 )
+
+[node name="AreaFalsa8" parent="." instance=ExtResource( 16 )]
+position = Vector2( 12896, 1280 )
+scale = Vector2( 25, 1 )
+
+[node name="AreaFalsa9" parent="." instance=ExtResource( 16 )]
+position = Vector2( 14432, 1280 )
+scale = Vector2( 70, 1 )
+
+[node name="PlataformaCai" parent="." instance=ExtResource( 23 )]
+position = Vector2( 12839.6, 880.06 )
+y_sera_destruido = 1280
+
+[node name="PlataformaCai2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 13061.9, 719.42 )
+y_sera_destruido = 1280
+
+[node name="PlataformaMovimenta" parent="." instance=ExtResource( 24 )]
+position = Vector2( 6063.08, 974.966 )
+velocidade = 8.0
+distancia = 1376
+
+[node name="PlataformaMovimenta2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 6064.13, 543.893 )
+velocidade = 7.0
+distancia = 768
+
+[node name="Caixa01A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 971.526, 939.621 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 3393, 939.703 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5494.06, 939.703 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa04A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5666.16, 754.645 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa05A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5774.29, 939.687 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa06A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7043.64, 781.383 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa07A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7426.02, 505.977 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa08A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8223.18, 780.056 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa09A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8498.78, 592.264 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa10A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 9411.54, 940.096 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa11A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 9412.07, 897.67 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa12A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 11798.1, 779.624 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa13A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12452.9, 939.705 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa14A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12905.5, 596.34 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa01B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2278.11, 941 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2458.52, 940.819 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2458.53, 901.253 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa04B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.72, 940.775 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa05B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.72, 901.208 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa06B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2650.69, 861.602 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa07B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.65, 940.775 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa08B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.65, 901.208 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa09B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.62, 861.602 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa10B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 2810.6, 822.068 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa11B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 10013, 940.812 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa12B" parent="." instance=ExtResource( 22 )]
+position = Vector2( 10013, 901.211 )
+scale = Vector2( 0.6, 0.6 )
 
 [node name="Inimigo01" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1691.78, 926.729 )
@@ -263,52 +412,17 @@ position = Vector2( 15156, 925.643 )
 esquerda_maxima = 15116
 direita_maxima = 15616
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 8243.39, 1193.19 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Vida" parent="." instance=ExtResource( 13 )]
+position = Vector2( 14508.3, 768.284 )
+scale = Vector2( 0.15, 0.15 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 4 )
+[node name="Vida2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 12910.3, 430.921 )
+scale = Vector2( 0.15, 0.15 )
 
-[node name="AreaFalsa" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1162, 1280 )
-scale = Vector2( 18, 1 )
-
-[node name="AreaFalsa3" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3200, 1280 )
-scale = Vector2( 14, 1 )
-
-[node name="AreaFalsa4" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3584, 1280 )
-scale = Vector2( 14, 1 )
-
-[node name="AreaFalsa5" parent="." instance=ExtResource( 16 )]
-position = Vector2( 4256, 1280 )
-scale = Vector2( 12, 1 )
-
-[node name="AreaFalsa6" parent="." instance=ExtResource( 16 )]
-position = Vector2( 5248, 1280 )
-scale = Vector2( 9, 1 )
-
-[node name="AreaFalsa7" parent="." instance=ExtResource( 16 )]
-position = Vector2( 6784, 1280 )
-scale = Vector2( 95, 1 )
-
-[node name="AreaFalsa2" parent="." instance=ExtResource( 16 )]
-position = Vector2( 10688, 1280 )
-scale = Vector2( 48, 1 )
-
-[node name="AreaFalsa8" parent="." instance=ExtResource( 16 )]
-position = Vector2( 12896, 1280 )
-scale = Vector2( 25, 1 )
-
-[node name="AreaFalsa9" parent="." instance=ExtResource( 16 )]
-position = Vector2( 14432, 1280 )
-scale = Vector2( 70, 1 )
-
-[node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
+[node name="Spinner" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1154.73, 676.375 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
 position = Vector2( 16319.1, 908.703 )
@@ -319,127 +433,13 @@ position = Vector2( 35.957, 4.49512 )
 scale = Vector2( 0.222, 0.222 )
 texture = ExtResource( 25 )
 
+[node name="Personagem" parent="." instance=ExtResource( 12 )]
+position = Vector2( 96, 910.683 )
+scale = Vector2( 1.5, 1.5 )
+CameraLimiteAbaixo = 1184
+CameraLimiteDireta = 16512
+
+[node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
+
 [node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
-
-[node name="Caixa11" parent="." instance=ExtResource( 21 )]
-position = Vector2( 9411.69, 939.507 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa12" parent="." instance=ExtResource( 21 )]
-position = Vector2( 9412.53, 897.462 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa15" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2278.11, 941 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa16" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2458.52, 940.819 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa17" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2458.53, 901.253 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa18" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2650.72, 940.775 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa19" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2650.72, 901.208 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa20" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2650.69, 861.602 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa21" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2810.65, 940.775 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa22" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2810.65, 901.208 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa23" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2810.62, 861.602 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa24" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2810.6, 822.068 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa25" parent="." instance=ExtResource( 22 )]
-position = Vector2( 10013, 940.812 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa26" parent="." instance=ExtResource( 22 )]
-position = Vector2( 10013, 901.211 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa01" parent="." instance=ExtResource( 21 )]
-position = Vector2( 972.412, 940.146 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa02" parent="." instance=ExtResource( 21 )]
-position = Vector2( 3392.82, 940.118 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa03" parent="." instance=ExtResource( 21 )]
-position = Vector2( 5494.84, 939.505 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa04" parent="." instance=ExtResource( 21 )]
-position = Vector2( 5774.49, 940.172 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa05" parent="." instance=ExtResource( 21 )]
-position = Vector2( 5665.03, 755.964 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa06" parent="." instance=ExtResource( 21 )]
-position = Vector2( 8222.98, 779.262 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa07" parent="." instance=ExtResource( 21 )]
-position = Vector2( 7049.32, 782.574 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa14" parent="." instance=ExtResource( 21 )]
-position = Vector2( 7424.28, 503.023 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa08" parent="." instance=ExtResource( 21 )]
-position = Vector2( 8498.96, 592.339 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa09" parent="." instance=ExtResource( 21 )]
-position = Vector2( 12453, 939.669 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa13" parent="." instance=ExtResource( 21 )]
-position = Vector2( 12905.4, 596.101 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa10" parent="." instance=ExtResource( 21 )]
-position = Vector2( 11798.2, 779.478 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="PlataformaCai" parent="." instance=ExtResource( 23 )]
-position = Vector2( 12839.6, 880.06 )
-y_sera_destruido = 1280
-
-[node name="PlataformaCai2" parent="." instance=ExtResource( 23 )]
-position = Vector2( 13061.9, 719.42 )
-y_sera_destruido = 1280
-
-[node name="PlataformaMovimenta" parent="." instance=ExtResource( 24 )]
-position = Vector2( 6063.08, 974.966 )
-velocidade = 8.0
-distancia = 1376
-
-[node name="PlataformaMovimenta2" parent="." instance=ExtResource( 24 )]
-position = Vector2( 6064.13, 543.893 )
-velocidade = 7.0
-distancia = 768
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]

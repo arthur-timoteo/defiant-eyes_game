@@ -1,5 +1,11 @@
 extends Area2D
 
+func _ready():
+	$AudioStreamPlayer1.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer2.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer3.volume_db = ScriptGlobal.sonsVolume
+	$AudioStreamPlayer4.volume_db = ScriptGlobal.sonsVolume
+
 func _entrou_no_corpo_do_spinner(_body):
 	var som_coletado = round(rand_range(1, 5))
 	
