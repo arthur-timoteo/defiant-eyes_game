@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="SldMusica" type="HSlider" parent="Node2D"]
-margin_left = 221.908
-margin_top = 255.636
-margin_right = 395.908
-margin_bottom = 295.636
+margin_left = 307.0
+margin_top = 256.0
+margin_right = 443.0
+margin_bottom = 296.0
 rect_scale = Vector2( 2, 2 )
 min_value = -60.0
 max_value = -5.0
@@ -89,16 +89,39 @@ __meta__ = {
 }
 
 [node name="SldSons" type="HSlider" parent="Node2D"]
-margin_left = 220.544
-margin_top = 337.089
-margin_right = 394.544
-margin_bottom = 377.089
+margin_left = 305.0
+margin_top = 337.0
+margin_right = 442.0
+margin_bottom = 377.0
 rect_scale = Vector2( 2, 2 )
 min_value = -60.0
 max_value = -5.0
 value = -5.0
 __meta__ = {
 "_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LblDificuldade" type="RichTextLabel" parent="Node2D"]
+margin_left = 52.0
+margin_top = 417.0
+margin_right = 283.0
+margin_bottom = 465.0
+custom_fonts/normal_font = SubResource( 3 )
+meta_underlined = false
+text = "Dificuldade:"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="OptnDificuldade" type="OptionButton" parent="Node2D"]
+margin_left = 305.5
+margin_top = 424.5
+margin_right = 486.5
+margin_bottom = 444.5
+rect_scale = Vector2( 1.5, 1.5 )
+__meta__ = {
 "_edit_use_anchors_": false
 }
 
@@ -113,4 +136,5 @@ __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
+[connection signal="item_selected" from="Node2D/OptnDificuldade" to="." method="nivel_dificuldade_selecionado"]
 [connection signal="pressed" from="Node2D/Voltar" to="." method="botao_voltar_cena_autenticado"]
