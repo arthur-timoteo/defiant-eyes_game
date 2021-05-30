@@ -31,9 +31,13 @@ func _on_HTTPRequest2_request_completed(result, response_code, headers, body):
 		ScriptGlobal.IdJogador = json.result["id"]
 		ScriptGlobal.NomeJogador = json.result["nome"]
 		ScriptGlobal.faseAtual = int(json.result["fase_atual"])
-		var status =  json.result["status"]
+		var status =  int(json.result["status"])
 		
-		get_tree().change_scene("res://telas/cena_autenticado.tscn")
+		if(status == 1):
+			get_tree().change_scene("res://telas/cena_autenticado.tscn")
+		else:
+			$CanvasLayer/Control/AcceptDialog.dialog_text = "Essa conta foi banida!";
+			$CanvasLayer/Control/AcceptDialog.show();
 	else:
 		$CanvasLayer/Control/AcceptDialog.dialog_text = "Email ou Senha inválidos!";
 		$CanvasLayer/Control/AcceptDialog.show();
