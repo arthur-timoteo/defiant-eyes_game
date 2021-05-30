@@ -20,6 +20,7 @@ var QuantidadePontos = 0
 var TempoDaFase = 120
 var PersonagemMorreu = false
 var PersonagemChegouFimFaseAtual = false
+var caminhoDirecionarDepoisDeSalvarAndamento = ""
 
 #Métricas
 var tempoGasto = 0
