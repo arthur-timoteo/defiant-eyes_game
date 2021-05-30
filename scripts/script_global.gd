@@ -19,6 +19,12 @@ var QuantidadeVida = 0
 var QuantidadePontos = 0
 var TempoDaFase = 120
 var PersonagemMorreu = false
+var PersonagemChegouFimFaseAtual = false
+
+#Métricas
+var tempoGasto = 0
+var inimigosMatados = 0
+var caixasQuebradas = 0
 
 #Back-end
 var BdURL = "http://olhosdesafiantes.eu5.org"
@@ -26,3 +32,8 @@ var BdURL = "http://olhosdesafiantes.eu5.org"
 #Jogador
 var IdJogador = 0
 var NomeJogador = ""
+
+func resetarMetricas():
+	tempoGasto = 0
+	inimigosMatados = 0
+	caixasQuebradas = 0

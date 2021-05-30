@@ -25,6 +25,7 @@ func personagem_pisou(body: Node) -> void:
 
 func destruir_caixa():
 	ScriptGlobal.QuantidadePontos += pontos
+	ScriptGlobal.caixasQuebradas += 1
 	$AudioStreamPlayer2.play()
 	$CaixaAtaque1.queue_free()
 	$CaixaAtaque2.queue_free()

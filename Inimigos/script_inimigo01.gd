@@ -73,6 +73,7 @@ func _algo_colidiu_com_inimigo(area):
 	
 	if(vida <= 0):
 		ScriptGlobal.QuantidadePontos += pontos
+		ScriptGlobal.inimigosMatados += 1
 		$".".set_collision_layer(0)
 		$CaixaAtaqueCabeca.queue_free()
 		$CaixaAtaque.queue_free()
@@ -101,6 +102,7 @@ func _personagem_pisou_no_inimigo(body):
 	
 	if(vida <= 0):
 		ScriptGlobal.QuantidadePontos += pontos
+		ScriptGlobal.inimigosMatados += 1
 		$CaixaAtaqueCabeca.queue_free()
 		$CaixaAtaque.queue_free()
 		queue_free()

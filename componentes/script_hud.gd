@@ -16,6 +16,9 @@ func _process(_delta):
 	
 	if(ScriptGlobal.PersonagemMorreu && $Caixa/PersonagemMorreu/Timer.is_stopped()):
 		$Caixa/PersonagemMorreu/Timer.start()
+		
+	if(ScriptGlobal.PersonagemChegouFimFaseAtual && ScriptGlobal.tempoGasto == 0):
+		ScriptGlobal.tempoGasto = ScriptGlobal.TempoDaFase - int($Caixa/Control3/Timer.time_left)
 
 func _tempo_fase_acabou():
 	$Caixa/Control3/Timer.stop()
