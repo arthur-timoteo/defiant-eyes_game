@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	$Node2D/RichTextLabel.text = ScriptGlobal.NomeJogador + ","
 	buscar_dados_jogador_no_ranking()
 	buscar_lista_desempenho()
 
@@ -27,7 +28,6 @@ func _on_HTTPRequest2_request_completed(result, response_code, headers, body):
 	
 	for i in range(json.result.size()):
 		if(json.result[i].id == ScriptGlobal.IdJogador):
-			$Node2D/RichTextLabel.text = json.result[i].nome + ","
 			$Node2D/RichTextLabel2.text = "Pontos: " + str(json.result[i].pontos)
 			$Node2D/RichTextLabel3.text = "Posição no ranking: " + str(i + 1)
 	
