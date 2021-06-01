@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Olhos Desafiantes - Informções do jogo</title>
+	<title>Olhos Desafiantes - Informações do jogo</title>
 	<!-- ↓-Especifica a descição do site  -->
 	<meta name="description" content="Jogo Olhos Desafiantes">
 	<!-- ↓-São as palavras chaves do site que ajuda o Motor de busca a encontrar o site obs:o Google não usa mais essa ferramenta, o bing sim  -->
@@ -67,7 +67,7 @@
 				<li class="lista-menu"><a href="Home.php"  class="texto-menu"><span>
 				Home</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
-				<li class="lista-menu"><a href="Download.php" class="texto-menu"><span>Download</span></a></li>
+				<li class="lista-menu"><a href="download.php" class="texto-menu"><span>Download</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
 				<li class="lista-menu"><a href="InfoJogo.php" class="texto-menu"><span>Informações do jogo</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
