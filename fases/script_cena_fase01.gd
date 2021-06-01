@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	ScriptGlobal.QuantidadeSpinner = 0
 	ScriptGlobal.QuantidadePontos = 0
 	ScriptGlobal.PersonagemMorreu = false
 	ScriptGlobal.PersonagemChegouFimFaseAtual = false
