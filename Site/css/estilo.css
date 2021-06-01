@@ -1,0 +1,528 @@
+@charset "utf-8";
+/*RESET*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family:'crash';
+    src:url("../fonts/crash-a-like.ttf");
+    
+}
+@font-face {
+	font-family:'roboto';
+    src:url("../fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+	font-family:'megaman';
+    src:url("../fonts/Megaman_2.ttf");
+}	
+
+h2,a{
+
+	font-family: crash;
+}
+span,p,h3{
+	font-family: roboto;
+}
+
+/*body:not(#index){
+	background-color: #FFF;
+}*/
+
+body{
+	width: 100%;
+	background-image:url("../imgs/Fundo.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*Corpo*/
+#Corpo{
+	min-height:100% !important;
+	width: 100%;
+
+}
+
+@media screen and (min-width: 700px){
+
+	#Corpo{
+	   min-height:100%;
+	   position:relative;
+	   display: flex;
+	   flex-direction: column;
+	}
+	
+}	
+/* ↓Logo*/
+#topo{
+	margin-bottom: 0.5%;
+	text-align: center;
+	background-color:#1010D4;
+	border-radius: 10px;
+	display:table;
+	padding-bottom: 1%
+}
+.logo img{
+	width: 50%;
+	margin-bottom: 1%;
+}	
+.entrarlogar{
+	width: 100%;
+	display:inline-block ;
+	margin-bottom: 1%;
+	text-align: center;
+	font-size: 20px;
+	color: #FEDE00;
+	padding-top: 10%;
+	text-decoration: none;
+	background-color:#1010D4;
+	padding: 15px 32px; 
+	border:0 none;
+	-webkit-border-radius: 5px; 
+}
+.entrarlogar:hover{
+	text-align: center;
+	font-size: 20px;
+	color: #FEDE00;
+	padding-top: 10%;
+	text-decoration: none;
+	background-color:#1010D4;
+	padding: 15px 32px; 
+	border:0 none;
+	-webkit-border-radius: 5px; 
+}
+
+@media screen and (min-width: 700px){
+	#topo{
+		min-width: 95%;
+		max-width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 1%;
+		text-align: 0;
+	}
+	.entrarlogar{
+	min-width: 95%;
+	max-width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+	}
+}	
+.logo-usua img{
+	width: 100%;
+}	
+.logo-usua h3{
+	color: #FEDE00;
+	text-decoration: none;
+}
+.logo-usua h3 a{
+	font-size: 25px;
+	color: #1010D4;
+	margin:1%;
+	text-decoration: none;
+	background-color:#FEDE00;
+	padding: 15px 32px; 
+	border:0 none;
+	-webkit-border-radius: 5px; 
+}
+
+@media screen and (min-width: 700px){
+	.logo-usua img{
+		width: 50%;
+		margin-left: 2%;
+		margin-bottom: 1%;
+		float: left;
+	}
+}
+/* ↓Menu*/
+#menu{
+	width: 100%; 
+	background-color:#FEDE00;
+	border-radius: 10px;
+	display:table;
+	padding-bottom: 2%;
+}
+ul{
+	list-style: none;
+	height: 2em;
+	text-align: center;
+
+}
+.texto-menu span{
+	width: 100%;
+	display:inline-block;
+}
+
+.lista-menu{
+		float: left;
+		margin-top: 0;
+		font-weight: bold; 
+		text-transform: uppercase;
+		border-bottom: 0;
+		height: 1.7em;
+		width: 100%;
+
+	}
+.espaco-menu{
+	visibility: hidden;
+}	
+.texto-menu, .texto-menu:visited{
+	display: block;
+	width: 100%;
+	text-align: center; 
+	cursor: pointer;
+	color: #1010D4;
+	font-size: 25px;
+}
+.texto-menu:hover{
+	text-decoration: none;
+	color:#1010D4;
+	
+}
+@media screen and (min-width: 700px){
+	#menu{
+		width: 95%;
+		min-width: 95%;
+		max-width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		display: block !important; 
+		background-color:#FEDE00;
+		border-radius: 10px;
+		padding-bottom: 0;
+	}
+	ul{
+		margin-left: 25%;
+
+	}
+	.espaco-menu{
+		visibility: visible;
+		width: 30px;
+		color: #f47001;
+		margin:0;
+		color: #1010D4;
+	}
+	.lista-menu{
+		width: auto;
+	}	
+}
+
+/*Conteudo da pagina*/
+#conteudo{
+	display: table;
+	background-color:#FEDE00;
+	border-radius: 10px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0.5%;
+	margin-bottom: 5%;
+	padding-bottom: 2%;
+	text-align: 0;
+	text-align: center;
+}
+.titulo-pagina{
+	color: #1010D4;
+	font-size: 35px;
+}
+@media screen and (min-width: 700px){
+	#conteudo{
+		background-color:#FEDE00;
+		border-radius: 10px;
+		min-width: 95%;
+		max-width: 95%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 0.5%;
+		margin-bottom: 100px;
+		text-align: 0;
+		text-align: center;
+	}
+}
+
+/*Login e Cadastro*/
+#login-form{
+	width: 100%;
+} 
+.login-data{
+	color: #1010D4;
+	text-align: center;
+	font-size: 25px;
+}
+.login-data input{
+	padding-left: 0.5%;
+	-webkit-border-radius: 5px; 
+}
+.login-botao input{
+	font-size: 25px;
+	color: #FEDE00;
+	margin:1%;
+	text-decoration: none;
+	background-color:#1010D4;
+	padding: 15px 32px; 
+	border:0 none;
+	-webkit-border-radius: 5px; 
+}
+#cadastro-form{
+	margin:2%;
+} 
+.cadastro-data{
+	color: #1010D4;
+	text-align: center;
+	font-size: 25px;
+}
+.cadastro-data input{
+	padding-left: 0.5%;
+	-webkit-border-radius: 5px; 
+}
+.cadastro-botao input{
+	font-size: 25px;
+	color: #FEDE00;
+	margin:1%;
+	text-decoration: none;
+	background-color:#1010D4;
+	padding: 15px 32px; 
+	border:0 none;
+	-webkit-border-radius: 5px; 
+}
+@media screen and (min-width: 720px){
+	#login-form{
+		margin:2%;
+		float : left;
+		width: 45%;
+	}
+	#cadastro-form{
+		margin:2%;
+		float : left;
+		width: 45%;
+		border-left:5px solid #1010D4;
+		border-radius: 2px;
+	}  
+}
+/*Home*/
+.home{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.home-texto{
+	margin-top:0;
+	color: #1010D4;
+	margin-bottom: 1.5%;
+	text-align: left;
+}
+
+#img1{
+	width: 100%;
+	margin-bottom: 1%;
+	height: 200px;
+	background: url(../imgs/print1.PNG) no-repeat center;
+	background-size: contain;
+}
+#img2{
+	width: 100%;
+	margin-bottom: 1%;
+	height: 200px;
+	background: url(../imgs/print2.PNG) no-repeat center;
+	background-size: contain;
+}
+#img3{
+	width: 100%;
+	margin-bottom: 1%;
+	height: 200px;
+	background: url(../imgs/print3.png) no-repeat center;
+	background-size: contain;
+}
+#img4{
+	width: 100%;
+	margin-bottom: 1%;
+	height: 200px;
+	background: url(../imgs/print4.PNG) no-repeat center;
+	background-size: contain;
+}
+#img5{
+	width: 100%;
+	margin-bottom: 1%;
+	height: 200px;
+	background: url(../imgs/print5.png) no-repeat center;
+	background-size: contain;
+}
+
+.irdownload{
+	visibility: hidden;	
+}
+
+@media screen and (min-width: 700px){
+	.irdownload{
+		visibility: visible;	
+		display: block;
+		min-width: 100%;
+		margin-bottom: 1.5%;
+		text-align: center;
+		font-size: 20px;
+		color: #FEDE00;
+		padding-top: 10%;
+		text-decoration: none;
+		background-color:#1010D4;
+		padding: 15px 32px; 
+		border:0 none;
+		-webkit-border-radius: 5px; 
+	}
+	.irdownload:hover{
+		color: #FEDE00;
+		text-decoration: none; 
+	}
+	.home-imgs{
+		display: flex;
+	}
+	#img1{
+		width: 30%;
+		margin-bottom: 1.5%;
+		height: 350px;
+		background: url(../imgs/print1.PNG) no-repeat center;
+		background-size: contain;
+		}
+	#img2{
+		width: 30%;
+		margin-bottom: 1.5%;
+		height: 350px;
+		background: url(../imgs/print2.PNG) no-repeat center;
+		background-size: contain;
+		margin-left: 5%;
+	}
+	#img3{
+		width: 30%;
+		margin-bottom: 1.5%;
+		height: 350px;
+		background: url(../imgs/print3.png) no-repeat center;
+		background-size: contain;
+		margin-left: 5%;
+	}
+	#img4{
+		width: 30%;
+		margin-bottom: 1.5%;
+		height: 350px;
+		background: url(../imgs/print4.PNG) no-repeat center;
+		background-size: contain;
+	}
+	#img5{
+		width: 30%;
+		margin-bottom: 1.5%;
+		height: 350px;
+		background: url(../imgs/print5.png) no-repeat center;
+		background-size: contain;
+		margin-left: 5%;
+	}
+}
+/*Download*/
+.download-texto{
+	margin-top:0;
+	margin-bottom: 1.5%;
+	text-align: left;
+	color: #1010D4;
+}
+
+.download-texto a{
+	font-size: 25px;
+	color: #FEDE00;
+	margin:1%;
+	text-decoration: none;
+	background-color:#1010D4;
+	padding: 5px 25px; 
+	border:0 none;
+	-webkit-border-radius: 5px;
+	width: 100%; 
+
+}
+.download-texto a:hover{
+	color: #FEDE00;
+	text-decoration: none;
+	;
+}	
+
+@media screen and (min-width: 700px){
+	.download-texto a{
+		padding: 15px 32px; 
+	}
+
+}	
+
+
+/*Informações do jogo*/
+.Info-jogo{
+	margin-left: 2%;
+	margin-right: 2%;
+	min-height: 280px;
+}
+
+
+.tipo-perso{
+	text-align: left;
+	color: #1010D4;
+	font-size: 30px;
+	
+}
+.info-perso{
+	text-align: left;
+	color: #1010D4;
+	font-size: 30px;
+	margin-bottom: 1.5%;
+}
+@media screen and (min-width: 700px){
+	.Info-jogo img{
+		float: left;
+	}
+	.info-perso{
+		margin-left: 10%;
+		margin-top:1.5%;
+	}
+}	
+
+/*Sobre*/
+.sobre{
+	margin-left: 2%;
+	margin-right: 2%;
+	display: flex;
+
+}
+.sobre-texto{
+	margin-top:0;
+	margin-bottom: 1.5%;
+	text-align: left;
+	color: #1010D4;
+}
+
+/*↓Rodapé*/
+footer{
+	position: relative;
+	left: 0;
+	bottom: 0;
+	min-width: 100%;
+	display: block !important; 
+	background-color:#FEDE00;
+	text-align: center;
+}
+footer h2{
+		margin-bottom: 0;
+	}
+@media screen and (min-width: 700px){
+	footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		min-width: 100%;
+		display: block !important; 
+		background-color:#FEDE00;
+		text-align: center;
+	}
+	footer h2{
+		padding-bottom: 10px;
+	}
+
+}
+

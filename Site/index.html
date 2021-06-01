@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Olhos Desafiantes - Login/Cadastrar</title>
+	<!-- ↓-Especifica a descição do site  -->
+	<meta name="description" content="Jogo Olhos Desafiantes">
+	<!-- ↓-São as palavras chaves do site que ajuda o Motor de busca a encontrar o site obs:o Google não usa mais essa ferramenta, o bing sim  -->
+	<meta name="keywords" content="Game, jogo, olhos, desafiantes">
+	<!-- ↓-O Robots é usado para nao mostrar a página em pesquisas do motor de busca -->
+	<meta name="robots" content="all">
+	<!-- ↓-Especifica o autor do Site -->
+	<meta name="author" content="PBG Corporation">
+	<!-- ↓-JavaScript -->
+	<script src="js/jquery.js"></script>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- ↓-Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- ↓-Font Awesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- ↓-CSS e o icone da página -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="icon" href="imgs/Logo.png">
+</head>
+<body>
+<div id="Corpo">
+	<div id="topo">
+		<div class="logo">
+			<img src="imgs/Logo.png">
+
+
+		</div>	
+
+	</div>
+	<nav id="menu">
+		<ul>
+				<li class="lista-menu"><a href="Home.php" class="texto-menu"><span>
+				Home</span></a></li>
+				<li class="lista-menu barra"><h2 class="espaco-menu">|</h2></li>
+				<li class="lista-menu"><a href="download.php" class="texto-menu"><span>Download</span></a></li>
+				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
+				<li class="lista-menu"><a href="InfoJogo.php" class="texto-menu"><span>Informações do jogo</span></a></li>
+				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
+				<li class="lista-menu"><a href="Ranking.php" class="texto-menu"><span>Ranking</span></a></li>
+				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
+				<li class="lista-menu"><a href="Sobre.php" class="texto-menu"><span>Sobre</span></a></li>
+			</ul>
+	</nav>
+	<div id="conteudo">
+		<form id="login-form" action="logar-teste.php" method="post">
+			<h2 class="titulo-pagina">Login</h2>
+			<p class="login-data">Email: <input type="email" name="email" placeholder="Digite Seu Email" required></p>
+			<p class="login-data">Senha: <input type="password" name="senha" placeholder="Digite Sua Senha" required></p>
+			<p class="login-botao"><input type="submit" name="login" value="Entrar"></p>
+		
+		</form>
+		<form id="cadastro-form" action="cadastrar-teste.php" method="post">
+			<h2 class="titulo-pagina">Cadastrar</h2>
+			<p class="cadastro-data">Nome: <input type="text" name="nome" placeholder="Digite seu nome de usuário" required></p>
+			<p class="cadastro-data">Email: <input type="email" name="email" placeholder="Digite seu Email" required></p>
+			<p class="cadastro-data">Senha: <input type="password" name="senha" placeholder="Digite sua Senha" required></p>
+			<p class="cadastro-data">Confirmar Senha: <input type="password" name="senhac" placeholder="Digite sua Senha" required></p>
+			<p class="cadastro-botao"><input type="submit" name="cadastro" value="Cadastrar"></p>
+		
+		</form>
+	</div>
+	<footer>
+		<h2>©Todos os direitos reservados | P B G C | Telefone (11)2469-6924</h2>
+	</footer>
+
+</div>	
+</body>
+</html>

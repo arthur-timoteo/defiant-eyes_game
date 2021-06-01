@@ -1,0 +1,4 @@
+Salvar Andamento - http://localhost/olhos_desafiantes/salvar_andamento.php
+Desempenho Jogador - http://localhost/olhos_desafiantes/desempenho_jogador.php?id=2
+Ranking - http://localhost/olhos_desafiantes/ranking.php
+Entrar - http://localhost/olhos_desafiantes/entrar.php
