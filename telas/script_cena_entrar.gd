@@ -30,7 +30,7 @@ func _on_HTTPRequest2_request_completed(result, response_code, headers, body):
 	if (json.result.size()>0):
 		ScriptGlobal.IdJogador = json.result["id"]
 		ScriptGlobal.NomeJogador = json.result["nome"]
-		ScriptGlobal.faseAtual = int(json.result["fase_atual"])
+		ScriptGlobal.faseMaxima = int(json.result["fase_atual"])
 		var status =  int(json.result["status"])
 		
 		if(status == 1):

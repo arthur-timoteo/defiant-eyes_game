@@ -13,6 +13,7 @@ var DificuldadeJogo = 1
 var telaOrigemAteOpcoes = ""
 
 #Controle Fase
+var faseMaxima = 1
 var faseAtual = 1
 var QuantidadeSpinner = 0
 var QuantidadeVida = 0

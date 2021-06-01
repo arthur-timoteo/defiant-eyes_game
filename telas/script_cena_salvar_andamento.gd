@@ -17,8 +17,9 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 		var resultado = json.result["msg"]
 		
 		if(resultado == "ok"):
-			if(ScriptGlobal.faseAtual < 3):
-				ScriptGlobal.faseAtual += 1
+			if(ScriptGlobal.faseAtual == ScriptGlobal.faseMaxima):
+				if(ScriptGlobal.faseMaxima < 3):
+					ScriptGlobal.faseMaxima += 1
 			assert(get_tree().change_scene(ScriptGlobal.caminhoDirecionarDepoisDeSalvarAndamento) == OK)
 		else:
 			$Control3/AnimationPlayer.queue_free()
