@@ -53,4 +53,7 @@ func clicou_na_opcao():
 		get_tree().change_scene("res://telas/cena_desempenho.tscn")
 		
 func botao_sair_jogo():
-	get_tree().quit()
+	ScriptGlobal.IdJogador = 0
+	ScriptGlobal.NomeJogador = ""
+	ScriptGlobal.faseMaxima = 1
+	get_tree().change_scene("res://telas/cena_inicial.tscn")
