@@ -68,7 +68,7 @@
 				<li class="lista-menu"><a href="Home.php" class="texto-menu"><span>
 				Home</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
-				<li class="lista-menu"><a href="Download.php" class="texto-menu"><span>Download</span></a></li>
+				<li class="lista-menu"><a href="download.php" class="texto-menu"><span>Download</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
 				<li class="lista-menu"><a href="InfoJogo.php" class="texto-menu"><span>Informações do jogo</span></a></li>
 				<li class="lista-menu"><h2 class="espaco-menu">|</h2></li>
