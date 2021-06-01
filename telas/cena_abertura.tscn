@@ -54,8 +54,14 @@ __meta__ = {
 }
 
 [node name="Fundo" type="ColorRect" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.0516764
+anchor_top = -0.0713955
+anchor_right = 1.05168
+anchor_bottom = 0.928605
+margin_left = -52.9166
+margin_top = 42.8373
+margin_right = -52.9166
+margin_bottom = 42.8373
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
