@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Olhos Desafiantes"
-run/main_scene="res://telas/cena_inicial.tscn"
+run/main_scene="res://telas/cena_abertura.tscn"
 config/icon="res://icon.png"
 
 [autoload]
