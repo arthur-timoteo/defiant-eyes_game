@@ -48,6 +48,8 @@ extents = Vector2( 8428.02, 12.2697 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 9 )
 
+[node name="Hud" parent="." instance=ExtResource( 13 )]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -25.0
@@ -129,8 +131,6 @@ scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 6 )
 centered = false
 
-[node name="Hud" parent="." instance=ExtResource( 13 )]
-
 [node name="FaseParedeEsq" type="StaticBody2D" parent="."]
 position = Vector2( -9.91068, 672 )
 collision_layer = 8
@@ -170,23 +170,58 @@ collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -196327, 0, 0, -196326, 1, 0, -196325, 1, 0, -196324, 1, 0, -196323, 1, 0, -196322, 1, 0, -196321, 1, 0, -196320, 1, 0, -196319, 1, 0, -196318, 1, 0, -196317, 1, 0, -196316, 1, 0, -196315, 1, 0, -196314, 1, 0, -196313, 1, 0, -196312, 1, 0, -196311, 2, 0, -196297, 0, 0, -196296, 2, 0, -65258, 0, 0, -65257, 2, 0, 262420, 0, 0, 262421, 2, 0, 590095, 0, 0, 590096, 2, 0, 721358, 0, 0, 721359, 1, 0, 721360, 1, 0, 721361, 1, 0, 721362, 1, 0, 721363, 1, 0, 721364, 1, 0, 721365, 1, 0, 721366, 2, 0, 917583, 0, 0, 917584, 1, 0, 917585, 2, 0, 917690, 0, 0, 917691, 1, 0, 917692, 1, 0, 917693, 1, 0, 917694, 1, 0, 917695, 1, 0, 917696, 1, 0, 917697, 2, 0, 917760, 0, 0, 917761, 1, 0, 917762, 1, 0, 917763, 1, 0, 917764, 1, 0, 917765, 1, 0, 917766, 2, 0, 917959, 0, 0, 917960, 1, 0, 917961, 1, 0, 917962, 2, 0, 1048748, 0, 0, 1048749, 1, 0, 1048750, 1, 0, 1048751, 2, 0, 1245236, 0, 0, 1245237, 1, 0, 1245238, 1, 0, 1245239, 1, 0, 1245240, 1, 0, 1245241, 1, 0, 1245242, 1, 0, 1245243, 1, 0, 1245244, 1, 0, 1245245, 1, 0, 1245246, 1, 0, 1245247, 1, 0, 1245248, 1, 0, 1245249, 1, 0, 1245250, 2, 0, 1245263, 0, 0, 1245264, 1, 0, 1245265, 2, 0, 1245291, 0, 0, 1245292, 1, 0, 1245293, 1, 0, 1245294, 1, 0, 1245295, 2, 0, 1245347, 0, 0, 1245348, 1, 0, 1245349, 1, 0, 1245350, 1, 0, 1245351, 1, 0, 1245352, 1, 0, 1245353, 1, 0, 1245354, 1, 0, 1245355, 2, 0, 1245413, 0, 0, 1245414, 1, 0, 1245415, 2, 0, 1245437, 0, 0, 1245438, 1, 0, 1245439, 1, 0, 1245440, 1, 0, 1245441, 2, 0, 1245446, 0, 0, 1245447, 1, 0, 1245448, 1, 0, 1245449, 1, 0, 1245450, 1, 0, 1245451, 1, 0, 1245452, 1, 0, 1245453, 2, 0, 1245485, 0, 0, 1245486, 1, 0, 1245487, 1, 0, 1245488, 1, 0, 1245489, 2, 0, 1245518, 0, 0, 1245519, 1, 0, 1245520, 1, 0, 1245521, 2, 0, 1245555, 0, 0, 1245556, 1, 0, 1245557, 1, 0, 1245558, 1, 0, 1245559, 1, 0, 1245560, 1, 0, 1245561, 1, 0, 1245562, 1, 0, 1245563, 1, 0, 1245564, 1, 0, 1245565, 2, 0, 1245631, 0, 0, 1245632, 1, 0, 1245633, 2, 0, 1376564, 0, 0, 1376565, 1, 0, 1376566, 1, 0, 1376567, 2, 0 )
 
-[node name="Personagem" parent="." instance=ExtResource( 11 )]
-position = Vector2( 96, 910.683 )
-scale = Vector2( 1.5, 1.5 )
-CameraLimiteAbaixo = 1184
-CameraLimiteDireta = 16512
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 8243.39, 1193.19 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Vida" parent="." instance=ExtResource( 14 )]
-position = Vector2( 10741.4, 757.605 )
-scale = Vector2( 0.15, 0.15 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
 
-[node name="Spinner" parent="." instance=ExtResource( 12 )]
-position = Vector2( 2560, 600 )
-scale = Vector2( 0.3, 0.3 )
+[node name="AreaFalsa" parent="." instance=ExtResource( 15 )]
+position = Vector2( 5696, 1280 )
+scale = Vector2( 51, 1 )
 
-[node name="Spinner2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 9984, 64 )
-scale = Vector2( 0.3, 0.3 )
+[node name="AreaFalsa2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 9728, 1280 )
+scale = Vector2( 19, 1 )
+
+[node name="Caixa01A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 3551.37, 779.654 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa02A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 5807.96, 723.651 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa03A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 8527.42, 212.386 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa04A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 9262.91, 75.7673 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa05A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 10484.9, 75.6593 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa06A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12041, 779.586 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa07A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12180.4, 659.62 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa08A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 12243.4, 532.033 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Caixa09A" parent="." instance=ExtResource( 21 )]
+position = Vector2( 14335.1, 537.696 )
+scale = Vector2( 0.6, 0.6 )
 
 [node name="Inimigo01" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1693.89, 767.292 )
@@ -288,26 +323,17 @@ position = Vector2( 14800.4, 927.115 )
 esquerda_maxima = 14400
 direita_maxima = 15072
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 8243.39, 1193.19 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Vida" parent="." instance=ExtResource( 14 )]
+position = Vector2( 10741.4, 757.605 )
+scale = Vector2( 0.15, 0.15 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 4 )
+[node name="Spinner" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2560, 600 )
+scale = Vector2( 0.3, 0.3 )
 
-[node name="AreaFalsa" parent="." instance=ExtResource( 15 )]
-position = Vector2( 5696, 1280 )
-scale = Vector2( 51, 1 )
-
-[node name="AreaFalsa2" parent="." instance=ExtResource( 15 )]
-position = Vector2( 9728, 1280 )
-scale = Vector2( 19, 1 )
-
-[node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
-
-[node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
+[node name="Spinner2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 9984, 64 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="CaixaSom" parent="." instance=ExtResource( 19 )]
 position = Vector2( 15699.8, 867.447 )
@@ -318,39 +344,13 @@ position = Vector2( 40.2656, -3.5365 )
 scale = Vector2( 0.222, 0.222 )
 texture = ExtResource( 22 )
 
-[node name="Caixa01" parent="." instance=ExtResource( 21 )]
-position = Vector2( 3551.37, 779.654 )
-scale = Vector2( 0.6, 0.6 )
+[node name="Personagem" parent="." instance=ExtResource( 11 )]
+position = Vector2( 96, 910.683 )
+scale = Vector2( 1.5, 1.5 )
+CameraLimiteAbaixo = 1184
+CameraLimiteDireta = 16512
 
-[node name="Caixa02" parent="." instance=ExtResource( 21 )]
-position = Vector2( 5807.96, 723.651 )
-scale = Vector2( 0.6, 0.6 )
+[node name="TransicaoIni" parent="." instance=ExtResource( 20 )]
 
-[node name="Caixa03" parent="." instance=ExtResource( 21 )]
-position = Vector2( 8527.42, 212.386 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa04" parent="." instance=ExtResource( 21 )]
-position = Vector2( 9262.91, 75.7673 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa05" parent="." instance=ExtResource( 21 )]
-position = Vector2( 10484.9, 75.6593 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa06" parent="." instance=ExtResource( 21 )]
-position = Vector2( 12041, 779.586 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa07" parent="." instance=ExtResource( 21 )]
-position = Vector2( 12180.4, 659.62 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa08" parent="." instance=ExtResource( 21 )]
-position = Vector2( 12243.4, 532.033 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Caixa09" parent="." instance=ExtResource( 21 )]
-position = Vector2( 14335.1, 537.696 )
-scale = Vector2( 0.6, 0.6 )
+[node name="TransicaoFim" parent="." instance=ExtResource( 18 )]
 [connection signal="area_entered" from="Area2D" to="." method="limpar_objeto"]

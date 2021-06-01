@@ -21,6 +21,8 @@ func _process(_delta):
 		ScriptGlobal.tempoGasto = ScriptGlobal.TempoDaFase - int($Caixa/Control3/Timer.time_left)
 
 func _tempo_fase_acabou():
+	ScriptGlobal.QuantidadeVida = 0
+	ScriptGlobal.QuantidadeSpinner = 0
 	$Caixa/Control3/Timer.stop()
 	get_tree().paused = not get_tree().paused
 	$Caixa/TempoAcabou.visible = true
@@ -30,6 +32,8 @@ func _tempo_fase_acabou():
 	get_tree().change_scene("res://telas/cena_fases.tscn")
 
 func _personagem_morreu():
+	ScriptGlobal.QuantidadeVida = 0
+	ScriptGlobal.QuantidadeSpinner = 0
 	$Caixa/PersonagemMorreu/Timer.paused = true
 	$Caixa/Control3/Timer.stop()
 	get_tree().paused = not get_tree().paused
