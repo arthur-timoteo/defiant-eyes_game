@@ -1,23 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://componentes/script_caixa_som.gd" type="Script" id=1]
+[ext_resource path="res://ativos/imagens/caixa-jbl.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23.499, 15.0258 )
 
 [node name="CaixaSom" type="Area2D"]
 collision_layer = 4
 script = ExtResource( 1 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.420448, -7.51018 )
+scale = Vector2( 0.19384, 0.19384 )
+texture = ExtResource( 2 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -10.0
-margin_top = -10.0
-margin_right = 10.0
-margin_bottom = 10.0
-color = Color( 0.196078, 0.705882, 0.788235, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="body_entered" from="." to="." method="_personagem_encostou"]
