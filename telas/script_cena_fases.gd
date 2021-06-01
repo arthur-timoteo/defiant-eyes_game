@@ -70,10 +70,15 @@ func altera_sprite_fase():
 
 func direciona_fase():
 	if(faseSelecionada == 1):
+		ScriptGlobal.QuantidadeVida = 3
+		ScriptGlobal.TempoDaFase = 120
 		get_tree().change_scene("res://fases/cena_fase01.tscn")
 	elif(faseSelecionada == 2):
+		ScriptGlobal.QuantidadeVida = 3
+		ScriptGlobal.TempoDaFase = 120
 		get_tree().change_scene("res://fases/cena_fase02.tscn")
 	elif(faseSelecionada == 3):
+		ScriptGlobal.QuantidadeVida = 3
 		ScriptGlobal.TempoDaFase = 150
 		get_tree().change_scene("res://fases/cena_fase03.tscn")
 
