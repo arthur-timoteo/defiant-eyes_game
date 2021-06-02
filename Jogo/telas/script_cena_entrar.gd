@@ -4,10 +4,14 @@ func botao_voltar_para_tela_inicial():
 	get_tree().change_scene("res://telas/cena_inicial.tscn")
 
 func botao_entrar():
-	var url_requisicao = ScriptGlobal.BdURL + "/servico/verificar_se_cadastrado.php"
-	var dados_envio = "email="+$Node2D/LiEdEmail.text
-	var cabecalho   = ["Content-Type: application/x-www-form-urlencoded"] 
-	$Node2D/HTTPRequest.request(url_requisicao, cabecalho, false,HTTPClient.METHOD_POST, dados_envio)
+	if($Node2D/LiEdEmail.text == "" || $Node2D/LiEdSenha.text == ""):
+		$CanvasLayer/Control/AcceptDialog.dialog_text = "Preencha todos os campos!";
+		$CanvasLayer/Control/AcceptDialog.show();
+	else:
+		var url_requisicao = ScriptGlobal.BdURL + "/servico/verificar_se_cadastrado.php"
+		var dados_envio = "email="+$Node2D/LiEdEmail.text
+		var cabecalho   = ["Content-Type: application/x-www-form-urlencoded"] 
+		$Node2D/HTTPRequest.request(url_requisicao, cabecalho, false,HTTPClient.METHOD_POST, dados_envio)
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
